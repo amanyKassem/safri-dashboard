@@ -1,0 +1,51 @@
+body {
+  direction: rtl;
+  text-align: right; }
+
+.owl-carousel {
+  direction: ltr; }
+  .owl-carousel .startsBlock {
+    justify-content: flex-end; }
+
+.fadeInRight {
+  animation-name: fadeInLeft !important; }
+
+.fadeInLeft {
+  animation-name: fadeInRight !important; }
+
+.hvr-forward:hover, .hvr-forward:focus, .hvr-forward:active {
+  -webkit-transform: translateX(-8px);
+  transform: translateX(-8px); }
+
+#scroll-top {
+  right: 15px; }
+
+.mr-18 {
+  margin-right: 0;
+  margin-left: 18px; }
+
+.mr-27 {
+  margin-right: 0;
+  margin-left: 27px; }
+
+.mr-1, .mx-1 {
+  margin-right: 0 !important;
+  margin-left: 0.25rem !important; }
+
+.mr-2, .mx-2 {
+  margin-right: 0 !important;
+  margin-left: 0.5rem !important; }
+
+.mr-3, .mx-3 {
+  margin-right: 0 !important;
+  margin-left: 1rem !important; }
+
+.mr-4, .mx-4 {
+  margin-right: 0 !important;
+  margin-left: 1.5rem !important; }
+
+.mr-md-2, .mx-md-2 {
+  margin-right: 0 !important;
+  margin-left: 0.5rem !important; }
+
+/*# sourceMappingURL=styleRTL.css.map */
