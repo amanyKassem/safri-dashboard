@@ -30,8 +30,29 @@
 
 <!--start auth form-->
 <div class="authForm">
-    <div class="container d-flex flex-column justify-content-center align-items-center">
+    <div class="container d-flex flex-column justify-content-between align-items-center">
         <img src="img/logo_final.png" class="logo" alt="logo">
+
+        <form action="">
+
+            <div class="form-group">
+                <label for="phone">رقم الجوال</label>
+                <input type="tel" class="form-control" id="phone" placeholder="برجاء ادخال رقم الجوال">
+            </div>
+
+            <div class="form-group">
+                <label for="pass">كلمة المرور</label>
+                <input type="password" class="form-control" id="pass" placeholder="برجاء ادخال كلمة المرور">
+            </div>
+
+            <a href="#" class="forget">نسيت كلمة المرور</a>
+
+            <button type="submit" class="orangeBtn" onclick="location.href='index.html'">دخول</button>
+
+            <a href="#" class="createAcc">انشاء حساب</a>
+
+        </form>
+
         <img src="img/login_bg.png" class="footerBuilding" alt="building">
     </div>
 </div>

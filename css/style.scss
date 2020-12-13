@@ -6,6 +6,9 @@
   box-sizing: border-box;
 }
 
+/* colors */
+
+$lightGray: #a7a7a7;
 $gray: #535455;
 $black: #2D2D2D;
 $orange: #FCA003;
@@ -47,25 +50,37 @@ a, button {
 }
 
 form {
-  label {
-    font-weight: bold;
-    font-size: 15px;
-  }
 
-  .form-control {
-    height: 50px;
-    padding: 10px 20px;
-    font-size: 15px;
-    color: black;
-    border: 1px solid #d6d6d6;
-    border-radius: 7px;
+  .form-group {
+    margin-bottom: 35px;
 
-    &:focus {
-      background-color: #fff;
-      outline: 0;
-      box-shadow: none;
-      border: 1px solid #d6d6d6;
+    label {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 20px;
     }
+
+    .form-control {
+      height: 55px;
+      padding: 10px 20px;
+      font-size: 15px;
+      color: black;
+      border: 1px solid transparent;
+      background: #f6f6f6;
+      border-radius: 0;
+      transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -webkit-transition: all 0.5s ease-in-out;
+
+      &:focus {
+        background-color: #fff;
+        outline: 0;
+        box-shadow: none;
+        border: 1px solid #d6d6d6;
+      }
+    }
+
   }
 
   .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), .bootstrap-select > .dropdown-toggle {
@@ -83,7 +98,7 @@ form {
 
 :placeholder-shown::-webkit-input-placeholder {
   opacity: 1;
-  color: $black;
+  color: $lightGray;
 }
 
 .clear {
@@ -195,14 +210,22 @@ body {
      width: 240px;
    }
 
+   form {
+     background-color: #fff;
+     width: 600px;
+     margin-bottom: 20px;
+     padding: 50px;
+   }
+
    .footerBuilding {
      position: absolute;
-     bottom: -50px;
+     bottom: -30px;
      right: 0;
      left: 0;
      margin: auto;
      height: 500px;
      width: 100%;
+     z-index: -1;
    }
  }
 
