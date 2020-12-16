@@ -33,7 +33,12 @@
     <div class="container d-flex flex-column justify-content-between align-items-center">
         <img src="img/logo_final.png" class="logo" alt="logo">
 
-        <form action="index.html">
+        <form action="activateAcc.html">
+
+            <div class="form-group">
+                <label for="restName">اسم المطعم</label>
+                <input type="text" class="form-control" id="restName" placeholder="برجاء ادخال اسم المطعم">
+            </div>
 
             <div class="form-group">
                 <label for="phone">رقم الجوال</label>
@@ -41,15 +46,31 @@
             </div>
 
             <div class="form-group">
+                <label for="email">البريد الالكتروني</label>
+                <input type="email" class="form-control" id="email" placeholder="برجاء ادخال البريد الالكتروني">
+            </div>
+
+            <div class="form-group">
+                <label for="commerce">السجل التجاري</label>
+                <input type="text" class="form-control" id="commerce" placeholder="برجاء ادخال السجل التجاري">
+            </div>
+
+            <div class="form-group">
                 <label for="pass">كلمة المرور</label>
                 <input type="password" class="form-control" id="pass" placeholder="برجاء ادخال كلمة المرور">
             </div>
 
-            <a href="forgetPass.html" class="forget">نسيت كلمة المرور</a>
+            <div class="form-group">
+                <label for="confirmPass">تأكيد كلمة المرور</label>
+                <input type="password" class="form-control" id="confirmPass" placeholder="برجاء ادخال كلمة المرور">
+            </div>
 
-            <button type="submit" class="orangeBtn">دخول</button>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="terms" name="terms">
+                <label class="custom-control-label subTitle" for="terms">بالتسجيل في التطبيق فأنك توافق علي <span>الشروط والأحكام</span></label>
+            </div>
 
-            <a href="register.html" class="createAcc">انشاء حساب</a>
+            <button type="submit" class="orangeBtn">تسجيل</button>
 
         </form>
 
