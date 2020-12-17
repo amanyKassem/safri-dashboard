@@ -86,8 +86,9 @@ form .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:hove
   color: #a7a7a7;
 }
 
-.clear {
-  clear: both;
+.modal-content {
+  border-radius: 0;
+  padding: 5px 15px;
 }
 
 .owl-carousel {
@@ -138,6 +139,29 @@ ul {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.orangeBtn {
+  background-color: #FCA003;
+  color: #fff;
+  border: 1px solid transparent;
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  padding: 5px 0;
+  width: 100%;
+  justify-content: center;
+  font-size: 17px;
+  border-radius: 4px;
+  height: 50px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+.orangeBtn:hover {
+  border-color: #FCA003;
+  background-color: #fff;
+  color: #FCA003;
 }
 
 /* end common style*/
@@ -207,28 +231,6 @@ body {
   font-weight: bold;
   color: #a7a7a7;
   font-size: 17px;
-}
-.authForm .container form .orangeBtn {
-  background-color: #FCA003;
-  color: #fff;
-  border: 1px solid transparent;
-  transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  padding: 5px 0;
-  width: 100%;
-  justify-content: center;
-  font-size: 17px;
-  border-radius: 4px;
-  height: 50px;
-  margin-bottom: 25px;
-  font-weight: bold;
-}
-.authForm .container form .orangeBtn:hover {
-  border-color: #FCA003;
-  background-color: #fff;
-  color: #FCA003;
 }
 .authForm .container form .createAcc {
   font-weight: bold;
@@ -706,6 +708,244 @@ body {
   color: #f9c933;
   font-size: 35px;
   margin-left: 25px;
+}
+.dashContent .content .container .filterDiv {
+  margin: 30px 0;
+  background: #fff;
+  -webkit-box-shadow: 0 0 13px 0 rgba(50, 50, 50, 0.15);
+  -moz-box-shadow: 0 0 13px 0 rgba(50, 50, 50, 0.15);
+  box-shadow: 0 0 13px 0 rgba(50, 50, 50, 0.15);
+  padding: 25px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashContent .content .container .filterDiv .custom-control {
+  padding-left: 0;
+}
+.dashContent .content .container .filterDiv .custom-control .custom-control-label {
+  padding-right: 25px;
+  font-size: 15px;
+  color: #2d2d2d;
+}
+.dashContent .content .container .filterDiv .custom-control .custom-control-label::before {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  left: auto;
+  border: #2d2d2d solid 1px;
+}
+.dashContent .content .container .filterDiv .custom-control .custom-control-label::after {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  left: auto;
+}
+.dashContent .content .container .filterDiv .custom-control .custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #FCA003;
+  background-color: #FCA003;
+}
+.dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle {
+  width: 110px;
+  height: 40px;
+  font-size: 15px;
+  background-color: #f7f7f7;
+  color: #a7a7a7;
+  margin-right: 15px;
+}
+.dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder, .dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:active, .dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:focus,
+.dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:hover, .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder, .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:active, .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:focus,
+.dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:hover {
+  background: #fff;
+  color: #1c1b1c;
+  font-size: 14px;
+  height: 100%;
+  border: 1px solid #f7f7f7;
+  box-shadow: none;
+  outline: 0 !important;
+  border-radius: 7px;
+}
+.dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-toggle:focus, .dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > select.mobile-device:focus + .dropdown-toggle, .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle .dropdown-toggle:focus, .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle > select.mobile-device:focus + .dropdown-toggle {
+  outline: none !important;
+  outline-offset: 0;
+  background-color: #f7f7f7;
+}
+.dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .filter-option-inner, .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle .filter-option-inner {
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+.dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu, .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle .dropdown-menu {
+  padding: 0;
+}
+.dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu .dropdown-item.active, .dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu .dropdown-item:active, .dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu .dropdown-item:focus, .dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu .dropdown-item:hover, .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle .dropdown-menu .dropdown-item.active, .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle .dropdown-menu .dropdown-item:active, .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle .dropdown-menu .dropdown-item:focus, .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle .dropdown-menu .dropdown-item:hover {
+  background-color: #FCA003;
+  color: #ffffff;
+}
+.dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu li, .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle .dropdown-menu li {
+  border-bottom: 1px solid #d6d6d6;
+  text-align: right;
+}
+.dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu li:last-child, .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle .dropdown-menu li:last-child {
+  border: 0;
+}
+.dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu li a, .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle .dropdown-menu li a {
+  padding: 10px;
+}
+.dashContent .content .container .filterDiv :placeholder-shown::-webkit-input-placeholder {
+  opacity: 1;
+  color: #a7a7a7;
+}
+.dashContent .content .container .filterDiv .addMenu {
+  width: 35px;
+  height: 35px;
+  background: #FCA003;
+  color: #fff;
+  justify-content: center;
+  border-radius: 7px;
+  font-size: 25px;
+  border: 1px solid transparent;
+}
+.dashContent .content .container .filterDiv .addMenu:hover {
+  background: #fff;
+  color: #FCA003;
+  border: 1px solid #FCA003;
+}
+.dashContent .content .container .filterDiv .modal .modal-body form {
+  display: flex;
+  align-items: center;
+}
+.dashContent .content .container .filterDiv .modal .modal-body form .form-group {
+  margin-bottom: 0;
+  flex: 1;
+}
+.dashContent .content .container .filterDiv .modal .modal-body form .orangeBtn {
+  width: 150px;
+  margin: 0 25px 0 0;
+}
+.dashContent .content .container div.dataTables_wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_length, .dashContent .content .container div.dataTables_wrapper .dataTables_filter {
+  color: #535455;
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0 0 13px 0 rgba(50, 50, 50, 0.15);
+  -moz-box-shadow: 0 0 13px 0 rgba(50, 50, 50, 0.15);
+  box-shadow: 0 0 13px 0 rgba(50, 50, 50, 0.15);
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_length label, .dashContent .content .container div.dataTables_wrapper .dataTables_filter label {
+  margin-bottom: 0;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_length input, .dashContent .content .container div.dataTables_wrapper .dataTables_filter input {
+  border: 0;
+  border-radius: 0;
+  padding: 5px;
+  background-color: #f7f7f7;
+  margin-left: 3px;
+  margin-right: 10px;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_length select, .dashContent .content .container div.dataTables_wrapper .dataTables_filter select {
+  margin: 0 10px;
+  border: 0;
+  border-radius: 0;
+  padding: 5px;
+  background-color: #f7f7f7;
+  padding: 4px;
+  width: 100px;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollHead {
+  padding: 5px 10px;
+  background: #2d2d2d;
+  color: #fff;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollHead .dataTables_scrollHeadInner {
+  width: 100% !important;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollHead .dataTables_scrollHeadInner table {
+  width: 100% !important;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollHead .dataTables_scrollHeadInner table thead th, .dashContent .content .container div.dataTables_wrapper .dataTables_scrollHead .dataTables_scrollHeadInner table thead td {
+  border-bottom: 0;
+  text-align: center;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody {
+  height: auto !important;
+  max-height: unset !important;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table {
+  width: 100% !important;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr {
+  background-color: #fff;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td {
+  text-align: center;
+  color: #7e8082;
+  padding: 20px 10px;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td .custom-control-label {
+  font-size: 15px;
+  color: #2d2d2d;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td .custom-control-label::before {
+  background-color: #f7f7f7;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td .custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #FCA003;
+  background-color: #FCA003;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td a {
+  justify-content: center;
+  color: #7e8082;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td a.edit, .dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td a.delete {
+  background: #f7f7f7;
+  width: 100px;
+  height: 40px;
+  margin: auto;
+  border-radius: 9px;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td a.edit:hover {
+  background-color: #FCA003;
+  color: #fff;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td a.delete:hover {
+  background-color: #f00;
+  color: #fff;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td a.more {
+  font-size: 8px;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr.odd > .sorting_1, .dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr.even > .sorting_1 {
+  background-color: #fff;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: #7e8082 !important;
+  border: 0;
+  border-radius: 0;
+  font-size: 16px;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dashContent .content .container div.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover, .dashContent .content .container div.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background: transparent;
+  border: 0;
+  color: #f29f33 !important;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_paginate .paginate_button.previous, .dashContent .content .container div.dataTables_wrapper .dataTables_paginate .paginate_button.next {
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  color: #7e8082 !important;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover, .dashContent .content .container div.dataTables_wrapper .dataTables_paginate .paginate_button.next:hover {
+  background-color: #FCA003;
+  color: #fff !important;
 }
 
 /* end index */
