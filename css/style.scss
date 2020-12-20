@@ -876,7 +876,7 @@ body {
         align-items: center;
         justify-content: space-between;
 
-        .custom-control {
+        .custom-checkbox {
           padding-left: 0;
 
           .custom-control-label{
@@ -990,21 +990,184 @@ body {
         }
 
         .modal{
-          .modal-body{
-            form{
-              display: flex;
-              align-items: center;
-              .form-group {
-                margin-bottom: 0;
-                flex: 1;
+
+          .orangeBtn {
+            width: 150px;
+            margin: 0 25px 0 0;
+            border-radius: 0;
+          }
+
+          .modal-dialog {
+            max-width: 800px;
+
+            .modal-body{
+              form{
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+                .form-group {
+                  margin-bottom: 0;
+                  flex: 1;
+                }
+
               }
-              .orangeBtn {
-                width: 150px;
-                margin: 0 25px 0 0;
+            }
+
+          }
+
+          &#addProduc{
+            .modal-content {
+              padding: 0;
+              border: 0;
+
+              .modal-header{
+                background-color: $orange;
+                color: #fff;
+                opacity: 1;
+                align-items: center;
+                border-bottom: 0;
+                border-radius: 0;
+                padding: 20px 30px;
+
+                h5{
+                  font-size: 22px;
+                  font-weight: bold;
+                }
+
+                .close {
+                  color: #fff;
+                  padding: 0;
+                  margin: 0;
+                  opacity: 1;
+                  font-size: 30px;
+                }
+
+              }
+
+              .modal-body {
+                padding:30px;
+
+                form {
+                  flex-direction: column;
+                  align-items: normal;
+
+                  h4{
+                    margin-bottom: 30px;
+                    font-size: 21px;
+                    color: $black;
+                    font-weight: bold;
+                  }
+
+                  .custom-switch{
+                    padding-left: 70px;
+                    .custom-control-label {
+                      font-size: 17px;
+                      &::before {
+                        border-radius: 15px;
+                        width: 50px;
+                        height: 25px;
+                        left: -70px;
+                      }
+
+                      &::after {
+                        top: 28%;
+                        left: -65px;
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 50%;
+                      }
+                    }
+
+                    .custom-control-input:checked~.custom-control-label{
+                      &::before {
+                        border-color: #cacaca;
+                        background-color: #cacaca;
+                      }
+
+                      &::after {
+                        background-color: #f29f33;
+                        left: -55px;
+                      }
+                    }
+
+                  }
+
+                  .add {
+                    color: $orange;
+                    font-size: 20px;
+                    margin: 60px 0 30px;
+                    width: fit-content;
+                     i{
+                       width: 35px;
+                       height: 35px;
+                       background: $orange;
+                       color: #fff;
+                       display: flex;
+                       align-items: center;
+                       margin-left: 20px;
+                       justify-content: center;
+                       border-radius: 7px;
+                       font-size: 25px;
+                       border: 1px solid transparent;
+                       transition: all 0.5s ease-in-out;
+                       -o-transition: all 0.5s ease-in-out;
+                       -moz-transition: all 0.5s ease-in-out;
+                       -webkit-transition: all 0.5s ease-in-out;
+                     }
+                      &:hover{
+                        i{
+                          background: #fff;
+                          color: $orange;
+                          border: 1px solid $orange;
+                        }
+                      }
+                  }
+
+                  .form-group{
+                    position: relative;
+                    margin-bottom: 35px;
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                      font-weight: normal;
+                      font-size: 17px;
+                    }
+
+                    #photo-upload {
+                      opacity: 0;
+                      position: absolute;
+                      bottom: 0;
+                      width: 100%;
+                      height: 55px;
+                    }
+
+                    .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), .bootstrap-select > .dropdown-toggle {
+                      width: 100%;
+                      height: 55px;
+                      border-radius: 0;
+                      margin-right: 0;
+                    }
+
+                    textarea{
+                      resize: none;
+                      height: auto;
+                    }
+
+                  }
+                }
+
+
+              }
+
+              .modal-footer {
+                padding: 20px 30px;
+                border-top: 0;
               }
 
             }
           }
+
         }
 
       }
@@ -1110,6 +1273,17 @@ body {
                     justify-content: center;
                     color: $midGray;
 
+                    &:hover{
+                      color: $orange;
+                    }
+
+                    img{
+                      width: 50px;
+                      height: 50px;
+                      border-radius: 50%;
+                      border: 1px solid #e4e4e4;
+                    }
+
                     &.edit , &.delete {
                       background: #f7f7f7;
                       width: 100px;
@@ -1178,6 +1352,194 @@ body {
 
           }
         }
+      }
+
+      .productContainer{
+        margin: 30px 0;
+        background: #fff;
+        -webkit-box-shadow: 0 0 13px 0 rgba(50, 50, 50, 0.15);
+        -moz-box-shadow: 0 0 13px 0 rgba(50, 50, 50, 0.15);
+        box-shadow: 0 0 13px 0 rgba(50, 50, 50, 0.15);
+
+        .headTitle{
+          background: $black;
+          color: #fff;
+          font-size: 19px;
+          padding: 15px 20px;;
+        }
+
+        .infoCont {
+          display: flex;
+          justify-content: space-between;
+          padding: 30px;
+
+          img{
+            width: 250px;
+            height: 500px;
+            border: 1px solid $gray;
+          }
+
+          .info {
+            flex: 1;
+            margin-right: 15px;
+
+            .proName{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              h5{
+                color: $gray;
+                font-size: 17px;
+
+                span{
+                  color: $lightGray;
+                  margin-right: 25px;
+                  font-weight: bold;
+                }
+              }
+
+              .custom-switch{
+                padding-left: 70px;
+                .custom-control-label {
+                  font-size: 18px;
+                  color: $lightGray;
+                  font-weight: bold;
+                  &::before {
+                    border-radius: 15px;
+                    width: 50px;
+                    height: 25px;
+                    left: -70px;
+                  }
+
+                  &::after {
+                    top: 27%;
+                    left: -65px;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                  }
+                }
+
+                .custom-control-input:checked~.custom-control-label{
+                  &::before {
+                    border-color: #cacaca;
+                    background-color: #cacaca;
+                  }
+
+                  &::after {
+                    background-color: #f29f33;
+                    left: -55px;
+                  }
+                }
+
+              }
+            }
+
+            h5{
+              font-size: 18px;
+              margin: 5px 0 10px;
+              color: $lightGray;
+            }
+            h4{
+              font-size: 18px;
+              color: $midGray;
+              font-weight: bold;
+
+              &.comp {
+                margin: 20px 0 25px;
+                font-size: 20px;
+                color: $black;
+              }
+            }
+
+            .price{
+              color: $orange;
+              font-size: 22px;
+              font-weight: bold;
+              margin: 15px 0;
+
+              span{
+                color: $lightGray;
+                text-decoration: line-through;
+                font-size: 16px;
+                margin-right: 15px;
+              }
+            }
+
+            p{
+              font-size: 18px;
+              color: $midGray;
+            }
+
+            .custom-checkbox {
+              padding-left: 0;
+              margin-left: 80px;
+
+              .custom-control-label{
+
+                padding-right: 55px;
+                font-size: 17px;
+                color: $black;
+
+                &::before {
+                  top: 50%;
+                  transform: translateY(-50%);
+                  right: 0;
+                  left: auto;
+                  border: #2d2d2d solid 1px;
+                  border-radius: 0;
+                }
+                &::after{
+                  top: 50%;
+                  transform: translateY(-50%);
+                  right: 0;
+                  left: auto;
+                }
+
+              }
+
+              .custom-control-input:checked~.custom-control-label::before {
+                color: #fff;
+                border-color: $orange;
+                background-color: $orange;
+              }
+
+            }
+            .additionPrice{
+              color: $midGray;
+              font-size: 18px;
+            }
+
+            a{
+              justify-content: center;
+              color: $midGray;
+
+              &.edit , &.delete {
+                background: #f7f7f7;
+                width: 100px;
+                height: 40px;
+                border-radius: 9px;
+              }
+
+              &.edit{
+                margin-left: 35px;
+
+                &:hover{
+                  background-color: $orange;
+                  color: #fff;
+                }
+              }
+
+              &.delete{
+                &:hover{
+                  background-color: #f00;
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+
       }
 
     }

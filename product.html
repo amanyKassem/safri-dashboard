@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Safri</title>
+    <link rel="shortcut icon" href="img/logo_sofri.png">
+
+    <link href="css/all.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/hover.css" rel="stylesheet"/>
+    <link href="css/animate.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/icomoon.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <!--<link href="css/styleLTR.css" rel="stylesheet" />-->
+
+</head>
+<body>
+
+<!-- Start Loading Page -->
+
+<div class="layer-preloader">
+    <img src="img/logo_final.png" alt="Safri logo">
+</div>
+
+<!-- End Loading Page -->
+
+
+<!--  Start Header  -->
+
+<header class="dashHeader">
+    <div class="container">
+
+        <div class="menuBar d-flex d-md-none justify-content-between align-items-center">
+            <a href="home.html">
+                <img src="img/logo_sofri.png" class="logo" alt="logo">
+            </a>
+            <div class="toggle">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+        </div>
+
+
+        <div class="overlay"></div>
+
+        <div class="menu d-flex justify-content-between align-items-center">
+
+            <div class="rightDiv">
+                <a href="index.html" class="d-none d-md-block mr-18">
+                    <img src="img/safri_shadow.png" class="logo" alt="logo">
+                </a>
+
+                <a class="toggleSideMenu d-none d-md-block mr-18">
+                    <span class="icon-noun_menu"></span>
+                </a>
+            </div>
+
+            <div class="leftDiv d-flex align-items-center">
+                <a href="#" class="lang d-none d-md-flex">
+                    <span class="icon-language"></span>
+                    <span>En</span>
+                </a>
+
+                <a href="notifications.html" class="notifications d-none d-md-block">
+                    <span class="icon-notifcation"></span>
+                </a>
+
+                <div class="profile d-none d-md-block">
+                    <img class="img-fluid" src="img/pic.jpg" alt="profile">
+                    <span class="icon-arrow_down_sign_to_navigate"></span>
+                    <ul>
+                        <li><a href="">البروفايل</a></li>
+                        <li><a href="">البروفايل</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</header>
+<!--end header-->
+
+<!--start dashboard content-->
+<div class="dashContent d-flex">
+    <div class="sideMenu d-none d-md-block">
+
+        <div class="restInfo">
+            <img class="img-fluid" src="img/pic.jpg" alt="profile">
+            <span>اسم المطعم</span>
+        </div>
+
+        <ul class="mainUl">
+
+            <li>
+                <a href="index.html">
+                    <span class="icon-Home_yellow"></span>
+                    الرئيسية
+                </a>
+            </li>
+
+            <li>
+                <a href="menu.html">
+                    <span class="icon-Menu_bar_yellow"></span>
+                    المنيو
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="products.html">
+                    <span class="icon-product_bar_yellow"></span>
+                    المنتجات
+                </a>
+            </li>
+
+            <li class="sub-menu">
+                <a href="orders.html">
+                    <span class="icon-order_bar_yellow"></span>
+                    الطلبات
+                </a>
+            </li>
+
+            <li>
+                <a href="specialOrders.html">
+                    <span class="icon-order_espcial_uellow"></span>
+                    طلبات خاصة
+                </a>
+            </li>
+
+            <li>
+                <a href="addOffer.html">
+                    <span class="icon-Offers_bar_yellow"></span>
+                    اضافة عرض
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    <span class="icon-settings_bar_yellow"></span>
+                    الاعدادات
+                </a>
+            </li>
+
+            <li>
+                <a href="comments.html">
+                    <span class="icon-rate_menu_yellow"></span>
+                    التعليقات والتقييمات
+                </a>
+            </li>
+
+            <li>
+                <a href="contactUs.html">
+                    <span class="icon-call_bar_yellow"></span>
+                    تواصل معنا
+                </a>
+            </li>
+
+            <li>
+                <a href="sells.html">
+                    <span class="icon-bar_chart_yellow"></span>
+                    المبيعات
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <div class="content w-78">
+        <div class="container">
+
+            <div class="mainOrders">
+
+                <div class="blackBox">
+                    <img src="img/received.png" alt="orders">
+                    <div>
+                        <h3>100</h3>
+                        <h3>الطلبات الواردة</h3>
+                    </div>
+                </div>
+
+                <div class="blackBox">
+                    <span class="icon-noun_order"></span>
+                    <div>
+                        <h3>100</h3>
+                        <h3>الطلبات النشطة</h3>
+                    </div>
+                </div>
+
+                <div class="blackBox">
+                    <span class="icon-noun_order"></span>
+                    <div>
+                        <h3>100</h3>
+                        <h3>الطلبات المنتهية</h3>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="filterDiv p-0 m-0">
+                <!-- Modal -->
+                <div class="modal fade" id="addProduc" tabindex="-1" role="dialog" aria-labelledby="addProducTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">اضافة منتج</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span class="icon-cross_black"></span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="">
+
+                                    <div class="form-group">
+                                        <label for="photo-upload" class="custom-file-upload">صورة المنتج</label>
+                                        <input type="text" class="form-control plusInput" id="docPhoto" placeholder="Browse" disabled>
+                                        <input id="photo-upload" class="uploadFile" name='upload_cont_file' type="file">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="time">وقت التجهيز</label>
+                                        <input type="text" class="form-control" id="time">
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between">
+
+                                        <div class="form-group">
+                                            <label for="prodName">اسم المنتج</label>
+                                            <input type="text" class="form-control" id="prodName">
+                                        </div>
+
+                                        <div class="form-group mr-sm-4">
+                                            <label for="selectMenu">اختر المنيو</label>
+                                            <select class="selectpicker" id="selectMenu">
+                                                <option>منيو 1</option>
+                                                <option>منيو 2</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between">
+
+                                        <div class="form-group">
+                                            <label for="price">السعر</label>
+                                            <input type="text" class="form-control" id="price">
+                                        </div>
+
+                                        <div class="form-group mr-sm-4">
+                                            <label for="discount">الخصم</label>
+                                            <input type="text" class="form-control" id="discount">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="details">تفاصيل المنتج</label>
+                                        <textarea class="form-control" id="details" rows="4"></textarea>
+                                    </div>
+
+                                    <h4>مكونات</h4>
+
+                                    <div class="d-flex align-items-center justify-content-between">
+
+                                        <div class="form-group">
+                                            <label for="additionName">اسم الاضافة</label>
+                                            <input type="text" class="form-control" id="additionName">
+                                        </div>
+
+                                        <div class="form-group mr-sm-4">
+                                            <label for="additionPrice">السعر</label>
+                                            <input type="text" class="form-control" id="additionPrice">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between">
+
+                                        <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                            <label class="custom-control-label" for="customSwitch1">جبنة</label>
+                                        </div>
+
+                                        <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                            <label class="custom-control-label" for="customSwitch2">خبز</label>
+                                        </div>
+
+                                        <div class="custom-control custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                                            <label class="custom-control-label" for="customSwitch3">خس</label>
+                                        </div>
+
+                                    </div>
+
+                                    <a class="add">
+                                        <i class="fas fa-plus"></i>
+                                        أضف مرة اخري
+                                    </a>
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="orangeBtn" data-dismiss="modal">اضافة</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productContainer">
+                <div class="headTitle">
+                    معلومات المنتج
+                </div>
+
+                <div class="infoCont">
+                    <img src="img/product.jpg" alt="product" class="img-fluid">
+                    <div class="info">
+                        <div class="proName">
+                            <h5>اسم المنتج <span>( وقت التجهيز دقيقة )</span></h5>
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="aval">
+                                <label class="custom-control-label" for="aval">متوفر</label>
+                            </div>
+                        </div>
+                        <h5>التصنيف</h5>
+                        <h4>اسم المنيو</h4>
+                        <h3 class="price">100 ريال <span>200 ريال</span></h3>
+                        <p>
+                            هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحة هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحة هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحة
+                        </p>
+                        <h4 class="comp">
+                            المكونات
+                        </h4>
+
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1">اسم الاضافة</label>
+                            </div>
+                            <span class="additionPrice">
+                                5 رس
+                            </span>
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label" for="customCheck2">اسم الاضافة</label>
+                            </div>
+                            <span class="additionPrice">
+                                5 رس
+                            </span>
+                        </div>
+
+                        <div class="d-flex align-items-center mt-5">
+                            <a href="#" class="edit">تعديل</a>
+                            <a href="#" class="delete">حذف</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!--end dashboard content-->
+
+
+<!-- start scroll-top-->
+<div id="scroll-top" class="text-center">
+    <i class="fas fa-angle-up"></i>
+</div>
+<!-- end scroll-top-->
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<script>
+    new WOW().init();
+</script>
+
+
+</body>
+</html>

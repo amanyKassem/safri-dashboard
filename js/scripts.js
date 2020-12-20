@@ -35,6 +35,16 @@ $(document).ready(function () {
     //     $(this).parent(".sub-menu").children("ul").slideToggle("100");
     // });
 
+
+    // upload documentation photo text
+
+    $('.uploadFile').change(function() {
+        var i = $(this).prev('.custom-file-upload').clone();
+        var file = $(this)[0].files[0].name;
+        $(this).prev('#docPhoto').attr('placeholder',file);
+    });
+
+
     //scroll top
     var scrollButton = $("#scroll-top");
     $(window).scroll(function () {

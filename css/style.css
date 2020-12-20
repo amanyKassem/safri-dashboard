@@ -720,28 +720,28 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.dashContent .content .container .filterDiv .custom-control {
+.dashContent .content .container .filterDiv .custom-checkbox {
   padding-left: 0;
 }
-.dashContent .content .container .filterDiv .custom-control .custom-control-label {
+.dashContent .content .container .filterDiv .custom-checkbox .custom-control-label {
   padding-right: 25px;
   font-size: 15px;
   color: #2d2d2d;
 }
-.dashContent .content .container .filterDiv .custom-control .custom-control-label::before {
+.dashContent .content .container .filterDiv .custom-checkbox .custom-control-label::before {
   top: 50%;
   transform: translateY(-50%);
   right: 0;
   left: auto;
   border: #2d2d2d solid 1px;
 }
-.dashContent .content .container .filterDiv .custom-control .custom-control-label::after {
+.dashContent .content .container .filterDiv .custom-checkbox .custom-control-label::after {
   top: 50%;
   transform: translateY(-50%);
   right: 0;
   left: auto;
 }
-.dashContent .content .container .filterDiv .custom-control .custom-control-input:checked ~ .custom-control-label::before {
+.dashContent .content .container .filterDiv .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
   border-color: #FCA003;
   background-color: #FCA003;
@@ -812,17 +812,145 @@ body {
   color: #FCA003;
   border: 1px solid #FCA003;
 }
-.dashContent .content .container .filterDiv .modal .modal-body form {
+.dashContent .content .container .filterDiv .modal .orangeBtn {
+  width: 150px;
+  margin: 0 25px 0 0;
+  border-radius: 0;
+}
+.dashContent .content .container .filterDiv .modal .modal-dialog {
+  max-width: 800px;
+}
+.dashContent .content .container .filterDiv .modal .modal-dialog .modal-body form {
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
 }
-.dashContent .content .container .filterDiv .modal .modal-body form .form-group {
+.dashContent .content .container .filterDiv .modal .modal-dialog .modal-body form .form-group {
   margin-bottom: 0;
   flex: 1;
 }
-.dashContent .content .container .filterDiv .modal .modal-body form .orangeBtn {
-  width: 150px;
-  margin: 0 25px 0 0;
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content {
+  padding: 0;
+  border: 0;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-header {
+  background-color: #FCA003;
+  color: #fff;
+  opacity: 1;
+  align-items: center;
+  border-bottom: 0;
+  border-radius: 0;
+  padding: 20px 30px;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-header h5 {
+  font-size: 22px;
+  font-weight: bold;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-header .close {
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  font-size: 30px;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body {
+  padding: 30px;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form {
+  flex-direction: column;
+  align-items: normal;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form h4 {
+  margin-bottom: 30px;
+  font-size: 21px;
+  color: #2D2D2D;
+  font-weight: bold;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .custom-switch {
+  padding-left: 70px;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .custom-switch .custom-control-label {
+  font-size: 17px;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .custom-switch .custom-control-label::before {
+  border-radius: 15px;
+  width: 50px;
+  height: 25px;
+  left: -70px;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .custom-switch .custom-control-label::after {
+  top: 28%;
+  left: -65px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #cacaca;
+  background-color: #cacaca;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+  background-color: #f29f33;
+  left: -55px;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .add {
+  color: #FCA003;
+  font-size: 20px;
+  margin: 60px 0 30px;
+  width: fit-content;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .add i {
+  width: 35px;
+  height: 35px;
+  background: #FCA003;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  justify-content: center;
+  border-radius: 7px;
+  font-size: 25px;
+  border: 1px solid transparent;
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .add:hover i {
+  background: #fff;
+  color: #FCA003;
+  border: 1px solid #FCA003;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .form-group {
+  position: relative;
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .form-group label {
+  font-weight: normal;
+  font-size: 17px;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .form-group #photo-upload {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 55px;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .form-group .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), .dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .form-group .bootstrap-select > .dropdown-toggle {
+  width: 100%;
+  height: 55px;
+  border-radius: 0;
+  margin-right: 0;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .form-group textarea {
+  resize: none;
+  height: auto;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-footer {
+  padding: 20px 30px;
+  border-top: 0;
 }
 .dashContent .content .container div.dataTables_wrapper {
   width: 100%;
@@ -906,6 +1034,15 @@ body {
   justify-content: center;
   color: #7e8082;
 }
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td a:hover {
+  color: #FCA003;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #e4e4e4;
+}
 .dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td a.edit, .dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td a.delete {
   background: #f7f7f7;
   width: 100px;
@@ -946,6 +1083,160 @@ body {
 .dashContent .content .container div.dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover, .dashContent .content .container div.dataTables_wrapper .dataTables_paginate .paginate_button.next:hover {
   background-color: #FCA003;
   color: #fff !important;
+}
+.dashContent .content .container .productContainer {
+  margin: 30px 0;
+  background: #fff;
+  -webkit-box-shadow: 0 0 13px 0 rgba(50, 50, 50, 0.15);
+  -moz-box-shadow: 0 0 13px 0 rgba(50, 50, 50, 0.15);
+  box-shadow: 0 0 13px 0 rgba(50, 50, 50, 0.15);
+}
+.dashContent .content .container .productContainer .headTitle {
+  background: #2D2D2D;
+  color: #fff;
+  font-size: 19px;
+  padding: 15px 20px;
+}
+.dashContent .content .container .productContainer .infoCont {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+.dashContent .content .container .productContainer .infoCont img {
+  width: 250px;
+  height: 500px;
+  border: 1px solid #535455;
+}
+.dashContent .content .container .productContainer .infoCont .info {
+  flex: 1;
+  margin-right: 15px;
+}
+.dashContent .content .container .productContainer .infoCont .info .proName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashContent .content .container .productContainer .infoCont .info .proName h5 {
+  color: #535455;
+  font-size: 17px;
+}
+.dashContent .content .container .productContainer .infoCont .info .proName h5 span {
+  color: #a7a7a7;
+  margin-right: 25px;
+  font-weight: bold;
+}
+.dashContent .content .container .productContainer .infoCont .info .proName .custom-switch {
+  padding-left: 70px;
+}
+.dashContent .content .container .productContainer .infoCont .info .proName .custom-switch .custom-control-label {
+  font-size: 18px;
+  color: #a7a7a7;
+  font-weight: bold;
+}
+.dashContent .content .container .productContainer .infoCont .info .proName .custom-switch .custom-control-label::before {
+  border-radius: 15px;
+  width: 50px;
+  height: 25px;
+  left: -70px;
+}
+.dashContent .content .container .productContainer .infoCont .info .proName .custom-switch .custom-control-label::after {
+  top: 27%;
+  left: -65px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+.dashContent .content .container .productContainer .infoCont .info .proName .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #cacaca;
+  background-color: #cacaca;
+}
+.dashContent .content .container .productContainer .infoCont .info .proName .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+  background-color: #f29f33;
+  left: -55px;
+}
+.dashContent .content .container .productContainer .infoCont .info h5 {
+  font-size: 18px;
+  margin: 5px 0 10px;
+  color: #a7a7a7;
+}
+.dashContent .content .container .productContainer .infoCont .info h4 {
+  font-size: 18px;
+  color: #7e8082;
+  font-weight: bold;
+}
+.dashContent .content .container .productContainer .infoCont .info h4.comp {
+  margin: 20px 0 25px;
+  font-size: 20px;
+  color: #2D2D2D;
+}
+.dashContent .content .container .productContainer .infoCont .info .price {
+  color: #FCA003;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+.dashContent .content .container .productContainer .infoCont .info .price span {
+  color: #a7a7a7;
+  text-decoration: line-through;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.dashContent .content .container .productContainer .infoCont .info p {
+  font-size: 18px;
+  color: #7e8082;
+}
+.dashContent .content .container .productContainer .infoCont .info .custom-checkbox {
+  padding-left: 0;
+  margin-left: 80px;
+}
+.dashContent .content .container .productContainer .infoCont .info .custom-checkbox .custom-control-label {
+  padding-right: 55px;
+  font-size: 17px;
+  color: #2D2D2D;
+}
+.dashContent .content .container .productContainer .infoCont .info .custom-checkbox .custom-control-label::before {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  left: auto;
+  border: #2d2d2d solid 1px;
+  border-radius: 0;
+}
+.dashContent .content .container .productContainer .infoCont .info .custom-checkbox .custom-control-label::after {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  left: auto;
+}
+.dashContent .content .container .productContainer .infoCont .info .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #FCA003;
+  background-color: #FCA003;
+}
+.dashContent .content .container .productContainer .infoCont .info .additionPrice {
+  color: #7e8082;
+  font-size: 18px;
+}
+.dashContent .content .container .productContainer .infoCont .info a {
+  justify-content: center;
+  color: #7e8082;
+}
+.dashContent .content .container .productContainer .infoCont .info a.edit, .dashContent .content .container .productContainer .infoCont .info a.delete {
+  background: #f7f7f7;
+  width: 100px;
+  height: 40px;
+  border-radius: 9px;
+}
+.dashContent .content .container .productContainer .infoCont .info a.edit {
+  margin-left: 35px;
+}
+.dashContent .content .container .productContainer .infoCont .info a.edit:hover {
+  background-color: #FCA003;
+  color: #fff;
+}
+.dashContent .content .container .productContainer .infoCont .info a.delete:hover {
+  background-color: #f00;
+  color: #fff;
 }
 
 /* end index */
