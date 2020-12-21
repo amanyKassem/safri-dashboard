@@ -15,6 +15,9 @@
     <link href="css/icomoon.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css"/>
+    <link href="css/bootstrap-select.min.css" rel="stylesheet"/>
     <!--<link href="css/styleLTR.css" rel="stylesheet" />-->
 
 </head>
@@ -96,14 +99,14 @@
 
         <ul class="mainUl">
 
-            <li class="active">
+            <li>
                 <a href="index.html">
                     <span class="icon-Home_yellow"></span>
                     الرئيسية
                 </a>
             </li>
 
-            <li>
+            <li class="active">
                 <a href="menu.html">
                     <span class="icon-Menu_bar_yellow"></span>
                     المنيو
@@ -122,7 +125,6 @@
                     <span class="icon-order_bar_yellow"></span>
                     الطلبات
                 </a>
-
             </li>
 
             <li>
@@ -132,12 +134,17 @@
                 </a>
             </li>
 
-            <li>
+            <li class="active sub-menu">
                 <a href="addOffer.html">
                     <span class="icon-Offers_bar_yellow"></span>
                     اضافة عرض
                 </a>
+                <ul>
+                    <li><a href='addOffer.html'>اضافة صورة</a></li>
+                    <li class="active"><a href='previousOffers.html'>العروض السابقة</a></li>
+                </ul>
             </li>
+
 
             <li>
                 <a href="settings.html">
@@ -166,7 +173,7 @@
                     المبيعات
                 </a>
             </li>
-            
+
         </ul>
     </div>
     <div class="content w-78">
@@ -200,89 +207,123 @@
 
             </div>
 
+            <div class="filterDiv">
 
-            <div class="latestProducts">
-                <h3><span>أحدث المنتجات</span></h3>
-                
-                <div class="products">
-
-                    <div class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
+                <div class="d-flex align-items-center">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="selectAll">
+                        <label class="custom-control-label" for="selectAll">تحديد الكل</label>
                     </div>
 
-                    <div class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </div>
+                    <select class="selectpicker" id="allFilter">
+                        <option>حذف</option>
+                        <option>تعطيل</option>
+                    </select>
+                </div>
 
-                    <div class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </div>
-
+                <div class="filterSort">
+                    فلتر حسب
+                    <select class="selectpicker" id="selectFilter">
+                        <option>الأحدث</option>
+                        <option>الاقدم</option>
+                    </select>
                 </div>
 
             </div>
-            
-            
-            <div class="mainInfo">
-                
-                <div class="whiteBox">
-                    <div class="orangeBg">
-                        <img src="img/order.svg" alt="products">
-                    </div>
-                    <div class="info">
-                        <h3>المنتجات</h3>
-                        <h3>100</h3>
-                    </div>
-                </div>
 
-                <div class="whiteBox">
-                    <div class="orangeBg">
-                        <img src="img/coment.svg" alt="comments">
-                    </div>
-                    <div class="info">
-                        <h3>التعليقات</h3>
-                        <h3>100</h3>
-                    </div>
-                </div>
+            <div class="tableContainer">
+                <table id="menuTable" class="display nowrap" >
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>رقم</th>
+                        <th>صورة العرض</th>
+                        <th>الحالة</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
 
-                <div class="whiteBox">
-                    <div class="orangeBg">
-                        <img src="img/star.svg" alt="rates">
-                    </div>
-                    <div class="info">
-                        <h3>التقييمات</h3>
-                        <h3>100</h3>
-                    </div>
-                </div>
-                
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td class="offerImg"><img class="img-fluid" src="img/product.jpg" alt="offer"></td>
+                        <td>
+                            <div class="accept">تم القبول</div>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td class="offerImg"><img class="img-fluid" src="img/product.jpg" alt="offer"></td>
+                        <td>
+                            <div class="refuse">تم القبول</div>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td class="offerImg"><img class="img-fluid" src="img/product.jpg" alt="offer"></td>
+                        <td>
+                            <div class="accept">تم القبول</div>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td class="offerImg"><img class="img-fluid" src="img/product.jpg" alt="offer"></td>
+                        <td>
+                            <div class="refuse">تم القبول</div>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+
+
+                    </tbody>
+                </table>
             </div>
 
         </div>
@@ -300,8 +341,32 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/datatables.min.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/scripts.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#menuTable').DataTable( {
+            "language": {
+                "paginate": {
+                    "next": '<i class="fas fa-chevron-left"></i>',
+                    "previous": '<i class="fas fa-chevron-right"></i>',
+                }
+            },
+            "scrollY": 200,
+            "scrollX": true
+        } );
+    } );
+</script>
+
+<!--start select-->
+<script>
+    $('.selectpicker').selectpicker();
+</script>
+<!--end select-->
+
 <script>
     new WOW().init();
 </script>

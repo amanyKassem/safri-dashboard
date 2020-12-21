@@ -96,7 +96,7 @@
 
         <ul class="mainUl">
 
-            <li class="active">
+            <li>
                 <a href="index.html">
                     <span class="icon-Home_yellow"></span>
                     الرئيسية
@@ -117,7 +117,7 @@
                 </a>
             </li>
 
-            <li class="sub-menu">
+            <li>
                 <a href="orders.html">
                     <span class="icon-order_bar_yellow"></span>
                     الطلبات
@@ -132,11 +132,15 @@
                 </a>
             </li>
 
-            <li>
+            <li class="active sub-menu">
                 <a href="addOffer.html">
                     <span class="icon-Offers_bar_yellow"></span>
                     اضافة عرض
                 </a>
+                <ul>
+                    <li class="active"><a href='addOffer.html'>اضافة صورة</a></li>
+                    <li><a href='previousOffers.html'>العروض السابقة</a></li>
+                </ul>
             </li>
 
             <li>
@@ -166,7 +170,7 @@
                     المبيعات
                 </a>
             </li>
-            
+
         </ul>
     </div>
     <div class="content w-78">
@@ -200,90 +204,35 @@
 
             </div>
 
+            <div class="filterDiv rightBorder">
+                <h3>اضافة صورة للعرض</h3>
+            </div>
 
-            <div class="latestProducts">
-                <h3><span>أحدث المنتجات</span></h3>
-                
-                <div class="products">
+            <div class="filterDiv flex-column">
+                <div class="imgMontg">
 
-                    <div class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </div>
+                    <button class="clickAdd">
+                        <span class="icon-image_upload"></span>
+                    </button>
 
-                    <div class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
+                    <div class="dropBox">
+                        <div class="textCenter">
+                            <div class="imagesUploadBlock">
+<!--                                <label class="uploadImg">-->
+<!--                                    <span><i class="far fa-image"></i></span>-->
+<!--                                    <input type="file" accept="image/*" class="imageUploader">-->
+<!--                                </label>-->
+                            </div>
                         </div>
                     </div>
 
                 </div>
+
+                <a class="orangeBtn w-50 mb-5 mt-2">ارسال</a>
 
             </div>
-            
-            
-            <div class="mainInfo">
-                
-                <div class="whiteBox">
-                    <div class="orangeBg">
-                        <img src="img/order.svg" alt="products">
-                    </div>
-                    <div class="info">
-                        <h3>المنتجات</h3>
-                        <h3>100</h3>
-                    </div>
-                </div>
 
-                <div class="whiteBox">
-                    <div class="orangeBg">
-                        <img src="img/coment.svg" alt="comments">
-                    </div>
-                    <div class="info">
-                        <h3>التعليقات</h3>
-                        <h3>100</h3>
-                    </div>
-                </div>
 
-                <div class="whiteBox">
-                    <div class="orangeBg">
-                        <img src="img/star.svg" alt="rates">
-                    </div>
-                    <div class="info">
-                        <h3>التقييمات</h3>
-                        <h3>100</h3>
-                    </div>
-                </div>
-                
-            </div>
 
         </div>
     </div>

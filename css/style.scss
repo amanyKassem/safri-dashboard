@@ -36,6 +36,10 @@ $bgGray: #e4e4e4;
   box-shadow: none;
 }
 
+.orangeTxt{
+  color: $orange !important;
+}
+
 .modal {
   overflow-y: auto;
 }
@@ -180,6 +184,15 @@ ul {
     border-color: $orange;
     background-color: #fff;
     color: $orange;
+  }
+
+  &.grayBtn{
+    background: $lightGray;
+    &:hover {
+      border-color: $lightGray;
+      background-color: #fff;
+      color: $lightGray;
+    }
   }
 }
 
@@ -349,7 +362,6 @@ body {
 }
 /*end auth form */
 
-/* start index */
 
 .dashHeader {
   background: $black;
@@ -556,6 +568,39 @@ body {
         &.sub-menu{
           ul{
             margin: 15px 50px 15px 0;
+
+            li{
+              > a {
+                border-right: 0;
+                position: relative;
+                &:after {
+                  position: absolute;
+                  content: '';
+                  width: 10px;
+                  height: 10px;
+                  background: transparent;
+                  right: 0;
+                  border-radius: 50%;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  transition: all 0.5s ease-in-out;
+                  -o-transition: all 0.5s ease-in-out;
+                  -moz-transition: all 0.5s ease-in-out;
+                  -webkit-transition: all 0.5s ease-in-out;
+                }
+              }
+
+              &:hover > a , &.active > a {
+                border-right: 0;
+                color: #fff;
+
+                &:after {
+                  background: #f29f33;
+                }
+
+              }
+            }
+
           }
         }
 
@@ -876,6 +921,19 @@ body {
         align-items: center;
         justify-content: space-between;
 
+        &.rightBorder{
+          display: flex;
+          align-items: center;
+          border-right: 18px solid #f29f33;
+          padding: 25px 30px;
+          h3{
+            font-size: 22px;
+            color: $gray;
+            font-weight: bold;
+            margin-bottom: 0;
+          }
+        }
+
         .custom-checkbox {
           padding-left: 0;
 
@@ -1170,6 +1228,214 @@ body {
 
         }
 
+        .anotherDet{
+          background: $black;
+          padding: 20px 25px;
+          width: 100%;
+          h4{
+            font-size: 17px;
+            color: #fff;
+            font-weight: bold;
+            margin-bottom: 0;
+          }
+        }
+
+        .payMethods {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          padding: 20px 45px;
+          border-bottom: 1px solid #e4e4e4;
+
+          div{
+            flex:1;
+            h3{
+              font-size: 17px;
+              font-weight: bold;
+              &:first-child{
+                color: $black;
+                margin-bottom: 15px;
+              }
+              &:last-child{
+                color: $midGray;
+              }
+            }
+          }
+
+          p{
+            color: $midGray;
+            line-height: 30px;
+            font-size: 17px;
+          }
+        }
+
+        .orangeBtn{
+          width:200px;
+          margin-bottom: 0;
+          border-radius: 0;
+          font-weight: bold;
+          &.grayBtn{
+            margin-right: 30px;
+          }
+        }
+
+        /* Style Upload */
+
+        .imagesUploadBlock {
+          display: inline-block;
+          vertical-align: top;
+          position: relative;
+          margin: 20px 0;
+        }
+
+        .uploadImg {
+          display: inline-block;
+          width: 140px;
+          height: 140px;
+          line-height: 110px;
+          text-align: center;
+          position: relative;
+          border-radius: 15px;
+          margin: 5px;
+          border: 3px dotted #e4e4e4;
+        }
+
+        .uploadImg:before{
+          content: '';
+          position: absolute;
+          width: 140px;
+          height: 140px;
+          border-radius: 15px;
+          right: 0;
+        }
+
+        .uploadImg span{
+          position: absolute;
+          right: 0;
+          left: 0;
+          margin: auto;
+          z-index: 9;
+          top: 50%;
+          transform: translateY(-50px);
+          font-size: 22px;
+        }
+
+        .uploadImg span i{
+          color: #e4e4e4
+        }
+
+        .uploadImg i{
+          font-size: 40px;
+          color: #e4e4e4;
+        }
+
+        .uploadImg input {
+          position: absolute;
+          opacity: 0;
+          z-index: -1;
+          display: none
+        }
+
+        .uploadedBlock {
+          position: absolute;
+          right: 0;
+          left: 0;
+          margin: auto;
+          top: 5px;
+          width: 140px;
+          height: 140px;
+          z-index: 9;
+        }
+
+        .uploadedBlock img {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          border-radius: 15px;
+        }
+
+        .uploadedBlock .close {
+          position: absolute;
+          top: 10px;
+          color: #fff;
+          font-size: 12px;
+          border-radius: 15px;
+          width: 20px;
+          height: 20px;
+          background: $midGray;
+          text-align: center;
+          opacity: 1;
+          left: 10px;
+        }
+
+        .imgMontg {
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex-wrap: wrap;
+          margin-bottom: 80px;
+        }
+
+        .dropBox .textCenter {
+          text-align: center;
+          display: inline-block;
+        }
+
+        .dropBox .uploadImg {
+          width: 150px;
+          height: 150px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #e4e4e4;
+        }
+
+        .dropBox .uploadImg span i {
+          color: $midGray;
+        }
+
+        .dropBox .uploadedBlock {
+          width: 150px;
+          height: 150px;
+        }
+
+        .dropBox .imagesUploadBlock {
+          margin: 10px 0;
+        }
+
+        .imgMontg .clickAdd , .imgMontg .addImage {
+          width: 70px;
+          height: 70px;
+          padding: 0;
+          background: transparent;
+          color: $midGray;
+          font-size: 25px;
+          margin: 18px 8px 30px;
+          display: inline-block;
+          border: 2px dashed #FCA003;
+          border-radius: 50%;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .settingForm{
+          width: 88%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .form-group {
+            width: 100%;
+
+            input{
+              color: $midGray;
+            }
+          }
+        }
+
       }
 
       div.dataTables_wrapper {
@@ -1203,7 +1469,6 @@ body {
             margin: 0 10px;
             border: 0;
             border-radius: 0;
-            padding: 5px;
             background-color: #f7f7f7;
             padding: 4px;
             width: 100px;
@@ -1250,6 +1515,38 @@ body {
                   text-align: center;
                   color: $midGray;
                   padding: 20px 10px;
+
+                  &.waiting{
+                    color: $orange;
+                  }
+
+                  &.offerImg{
+                    img{
+                      width: 200px;
+                      height: 110px;
+                      border-radius: 10px;
+                    }
+                  }
+
+                  .accept{
+                    padding: 10px;
+                    color: #6bc535;
+                    font-size: 18px;
+                    border: 1px solid #6bc535;
+                    border-radius: 7px;
+                    width: 150px;
+                    margin: auto;
+                  }
+
+                  .refuse{
+                    padding: 10px;
+                    color: #ea5750;
+                    font-size: 18px;
+                    border: 1px solid #ea5750;
+                    border-radius: 7px;
+                    width: 150px;
+                    margin: auto;
+                  }
 
                   .custom-control-label{
 
@@ -1515,7 +1812,7 @@ body {
               color: $midGray;
 
               &.edit , &.delete {
-                background: #f7f7f7;
+                background: #f3f3f3;
                 width: 100px;
                 height: 40px;
                 border-radius: 9px;
@@ -1542,12 +1839,60 @@ body {
 
       }
 
+      .orderDetTable{
+        table{
+          -webkit-box-shadow: 0 0 13px 0 rgba(50, 50, 50, 0.15);
+          -moz-box-shadow: 0 0 13px 0 rgba(50, 50, 50, 0.15);
+          box-shadow: 0 0 13px 0 rgba(50, 50, 50, 0.15);
+          thead{
+            background: #2d2d2d;
+            color: #fff;
+            th {
+              text-align: center;
+              vertical-align: middle;
+              padding: 20px 10px;
+            }
+          }
+
+          tbody {
+            tr {
+              background: #fff;
+
+              td{
+                vertical-align: middle;
+                text-align: center;
+                color: $midGray;
+                font-weight: bold;
+                img{
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+                  border: 1px solid #e4e4e4;
+                }
+              }
+
+              &.comp{
+                background: #fdf0d6;
+                td{
+                  color:$orange;
+                  font-size: 17px;
+                }
+              }
+
+            }
+          }
+
+
+        }
+      }
+
+
+
     }
 
   }
 }
 
-/* end index */
 
 
 

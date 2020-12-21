@@ -96,7 +96,7 @@
 
         <ul class="mainUl">
 
-            <li class="active">
+            <li>
                 <a href="index.html">
                     <span class="icon-Home_yellow"></span>
                     الرئيسية
@@ -117,12 +117,16 @@
                 </a>
             </li>
 
-            <li class="sub-menu">
+            <li class="active sub-menu">
                 <a href="orders.html">
                     <span class="icon-order_bar_yellow"></span>
                     الطلبات
                 </a>
-
+                <ul>
+                    <li class="active"><a href='incomingOrders.html'>الطلبات الواردة</a></li>
+                    <li><a href='activeOrders.html'>الطلبات النشطة</a></li>
+                    <li><a href='finishedOrders.html'>الطلبات المنتهية</a></li>
+                </ul>
             </li>
 
             <li>
@@ -166,7 +170,7 @@
                     المبيعات
                 </a>
             </li>
-            
+
         </ul>
     </div>
     <div class="content w-78">
@@ -200,90 +204,96 @@
 
             </div>
 
-
-            <div class="latestProducts">
-                <h3><span>أحدث المنتجات</span></h3>
-                
-                <div class="products">
-
-                    <div class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </div>
-
-                </div>
-
+            <div class="filterDiv rightBorder">
+                <h3>تفاصيل الطلب</h3>
             </div>
-            
-            
-            <div class="mainInfo">
-                
-                <div class="whiteBox">
-                    <div class="orangeBg">
-                        <img src="img/order.svg" alt="products">
-                    </div>
-                    <div class="info">
-                        <h3>المنتجات</h3>
-                        <h3>100</h3>
-                    </div>
-                </div>
 
-                <div class="whiteBox">
-                    <div class="orangeBg">
-                        <img src="img/coment.svg" alt="comments">
-                    </div>
-                    <div class="info">
-                        <h3>التعليقات</h3>
-                        <h3>100</h3>
-                    </div>
-                </div>
-
-                <div class="whiteBox">
-                    <div class="orangeBg">
-                        <img src="img/star.svg" alt="rates">
-                    </div>
-                    <div class="info">
-                        <h3>التقييمات</h3>
-                        <h3>100</h3>
-                    </div>
-                </div>
-                
+            <div class="orderDetTable">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">الصورة</th>
+                        <th scope="col">اسم المنتج</th>
+                        <th scope="col">الكمية</th>
+                        <th scope="col">السعر</th>
+                        <th scope="col">الخصم</th>
+                        <th scope="col">السعر الاجمالي</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img class="img-fluid" src="img/product.jpg" alt="product"></td>
+                            <td>بيتزا</td>
+                            <td>5</td>
+                            <td>60 رس</td>
+                            <td>0 رس</td>
+                            <td>60 رس</td>
+                        </tr>
+                        <tr class="comp">
+                            <td colspan="6">مكونات الطلب ( جبنة + بصل + لحم + طماطم + خس )</td>
+                        </tr>
+                        <tr>
+                            <td><img class="img-fluid" src="img/product.jpg" alt="product"></td>
+                            <td>بيتزا</td>
+                            <td>5</td>
+                            <td>60 رس</td>
+                            <td>0 رس</td>
+                            <td>60 رس</td>
+                        </tr>
+                        <tr class="comp">
+                            <td colspan="6">مكونات الطلب ( جبنة + بصل + لحم + طماطم + خس )</td>
+                        </tr>
+                        <tr>
+                            <td><img class="img-fluid" src="img/product.jpg" alt="product"></td>
+                            <td>بيتزا</td>
+                            <td>5</td>
+                            <td>60 رس</td>
+                            <td>0 رس</td>
+                            <td>60 رس</td>
+                        </tr>
+                        <tr class="comp">
+                            <td colspan="6">مكونات الطلب ( جبنة + بصل + لحم + طماطم + خس )</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+
+            <div class="filterDiv rightBorder justify-content-between">
+                <h3>السعر الاجمالي</h3>
+                <h3 class="orangeTxt">112 رس</h3>
+            </div>
+
+            <div class="filterDiv p-0 flex-column">
+                <div class="anotherDet">
+                    <h4>تفاصيل اخري</h4>
+                </div>
+                <div class="payMethods">
+                    <div>
+                        <h3>طريقة الدفع</h3>
+                        <h3>الدفع عند الاستلام</h3>
+                    </div>
+                    <div>
+                        <h3>تفاصيل التسليم</h3>
+                        <h3>الرياض - المملكة العربية السعودية</h3>
+                    </div>
+                </div>
+                <div class="payMethods flex-column align-items-start pt-4">
+                    <div class="mb-3">
+                        <h3>اسم العميل</h3>
+                        <h3>أماني قاسم</h3>
+                    </div>
+                    <div>
+                        <h3>رقم الجوال</h3>
+                        <h3>01012345678</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filterDiv justify-content-center p-3">
+                <a class="orangeBtn" href="activeOrders.html">قبول</a>
+                <a class="orangeBtn grayBtn" href="#">رفض</a>
+            </div>
+
 
         </div>
     </div>
@@ -302,6 +312,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/scripts.js"></script>
+
 <script>
     new WOW().init();
 </script>
