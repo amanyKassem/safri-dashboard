@@ -117,12 +117,11 @@
                 </a>
             </li>
 
-            <li>
+            <li class="sub-menu">
                 <a href="orders.html">
                     <span class="icon-order_bar_yellow"></span>
                     الطلبات
                 </a>
-
             </li>
 
             <li>
@@ -137,18 +136,13 @@
                     <span class="icon-Offers_bar_yellow"></span>
                     اضافة عرض
                 </a>
-
             </li>
 
-            <li class="active sub-menu">
+            <li>
                 <a href="settings.html">
                     <span class="icon-settings_bar_yellow"></span>
                     الاعدادات
                 </a>
-                <ul>
-                    <li class="active"><a href='addOffer.html'>الملف الشخصي</a></li>
-                    <li><a href='restInfo.html'>معلومات المطعم</a></li>
-                </ul>
             </li>
 
             <li>
@@ -165,7 +159,7 @@
                 </a>
             </li>
 
-            <li>
+            <li class="active">
                 <a href="sells.html">
                     <span class="icon-bar_chart_yellow"></span>
                     المبيعات
@@ -206,36 +200,44 @@
             </div>
 
             <div class="filterDiv rightBorder">
-                <h3>الملف الشخصي</h3>
+                <h3>ادارة الحسابات المالية</h3>
             </div>
 
-            <div class="filterDiv flex-column p-5">
-                <form class="settingForm" action="">
-
-                    <div class="changeImg">
-                        <a class="change">
-                            <img src="img/upload_image_full.png" alt="profile">
-                            <input class="file-upload" type="file" accept="image/*"/>
-                        </a>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name">اسم المستخدم</label>
-                        <input type="text" class="form-control" id="name" value="أماني قاسم">
-                        <img src="img/edit.png" alt="edit">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="pass">كلمة المرور</label>
-                        <input type="password" class="form-control" id="pass" value="123456">
-                        <img src="img/edit.png" alt="edit">
-                    </div>
-
-                    <button type="submit" class="orangeBtn w-75 mb-5 mt-2">حفظ</button>
-                </form>
-
+            <div class="orderDetTable">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">رقم الطلب</th>
+                        <th scope="col">اسم المنتج</th>
+                        <th scope="col">الكمية</th>
+                        <th scope="col">توصيل</th>
+                        <th scope="col">عمولة</th>
+                        <th scope="col">السعر الاجمالي</th>
+                        <th scope="col">الحالة</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="financialDetails.html">#12345</a></td>
+                            <td>بيتزا</td>
+                            <td>60 رس</td>
+                            <td>60 رس</td>
+                            <td>0 رس</td>
+                            <td>0 رس</td>
+                            <td><a href="financialDetails.html" class="accepted">تمت التسوية</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="financialDetails.html">#12345</a></td>
+                            <td>بيتزا</td>
+                            <td>60 رس</td>
+                            <td>60 رس</td>
+                            <td>0 رس</td>
+                            <td>0 رس</td>
+                            <td><a href="financialDetails.html" class="rejected">لم تتم التسوية</a></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
 
 
         </div>
@@ -255,6 +257,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/scripts.js"></script>
+
 <script>
     new WOW().init();
 </script>

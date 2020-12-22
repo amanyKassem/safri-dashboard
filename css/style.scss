@@ -30,6 +30,14 @@ $bgGray: #e4e4e4;
 }
 
 
+.pac-container{
+  z-index: 2000 !important;
+}
+
+.h40{
+  height: 40px !important;
+}
+
 .btn:hover, .btn:focus, .btn.focus {
   text-decoration: none;
   outline: none;
@@ -92,15 +100,20 @@ form {
 
   .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), .bootstrap-select > .dropdown-toggle {
     height: 50px;
-    border-radius: 7px;
+    border-radius: 0;
 
     > .dropdown-toggle.bs-placeholder, > .dropdown-toggle.bs-placeholder:active, > .dropdown-toggle.bs-placeholder:focus,
     > .dropdown-toggle.bs-placeholder:hover {
-      border-radius: 7px;
+      border-radius: 0;
     }
 
   }
 
+}
+
+textarea{
+  resize: none;
+  height: auto !important;
 }
 
 :placeholder-shown::-webkit-input-placeholder {
@@ -118,9 +131,9 @@ form {
 }
 
 .customHr {
-  margin-top: 0;
-  margin-bottom: 0;
-  border-top: 1px solid #eaeaea;
+  width: 100%;
+  margin: 35px 0;
+  border: 1px solid #f3f3f3;
 }
 
 a,
@@ -967,6 +980,9 @@ body {
 
         }
 
+        .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+          margin-right: 15px;
+        }
 
         .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), .bootstrap-select > .dropdown-toggle {
           width: 110px;
@@ -974,7 +990,6 @@ body {
           font-size: 15px;
           background-color: #f7f7f7;
           color: $lightGray;
-          margin-right: 15px;
 
           > .dropdown-toggle.bs-placeholder, > .dropdown-toggle.bs-placeholder:active, > .dropdown-toggle.bs-placeholder:focus,
           > .dropdown-toggle.bs-placeholder:hover {
@@ -1207,10 +1222,6 @@ body {
                       margin-right: 0;
                     }
 
-                    textarea{
-                      resize: none;
-                      height: auto;
-                    }
 
                   }
                 }
@@ -1404,7 +1415,7 @@ body {
           margin: 10px 0;
         }
 
-        .imgMontg .clickAdd , .imgMontg .addImage {
+        .imgMontg .clickAdd {
           width: 70px;
           height: 70px;
           padding: 0;
@@ -1427,13 +1438,233 @@ body {
           flex-direction: column;
           align-items: center;
 
+          .changeImg {
+            margin-bottom: 50px;
+
+            .change {
+              width: 80px;
+              height: 80px;
+              border-radius: 50%;
+              position: relative;
+              overflow: hidden;
+              cursor: pointer;
+
+              img {
+                width: 100%;
+                height: 100%;
+              }
+
+              .file-upload {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                margin: auto;
+                opacity: 0;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+              }
+            }
+          }
+
           .form-group {
             width: 100%;
+            position: relative;
 
             input{
               color: $midGray;
             }
+
+            img{
+              width: 25px;
+              height: 25px;
+              position: absolute;
+              left: 20px;
+              bottom: 15px;
+            }
+            .locImg{
+              img{
+                width: 18px;
+              }
+            }
           }
+        }
+
+        .openingTime{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          .time{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            span{
+              font-size: 18px;
+              font-weight: bold;
+              color: $midGray;
+              &:last-child{
+                margin-right: 55px;
+              }
+            }
+          }
+          .custom-switch{
+            padding-left: 70px;
+            .custom-control-label {
+              font-size: 18px;
+              color: $lightGray;
+              font-weight: bold;
+              &::before {
+                border-radius: 15px;
+                width: 50px;
+                height: 25px;
+                left: -70px;
+              }
+
+              &::after {
+                top: 7px;
+                left: -65px;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+              }
+            }
+
+            .custom-control-input:checked~.custom-control-label{
+              &::before {
+                border-color: #cacaca;
+                background-color: #cacaca;
+              }
+
+              &::after {
+                background-color: #f29f33;
+                left: -55px;
+              }
+            }
+
+          }
+        }
+
+        #map {
+          height: 400px;
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
+        .searchCont{
+          position: absolute;
+          top: 25px;
+          left: 35px;
+          #searchTextField {
+            border: 0;
+            height: 40px;
+            border-radius: 20px;
+            padding: 10px 15px 10px 30px;
+            width: 270px;
+            font-size: 15px;
+            color: $midGray;
+            outline: 0;
+            &:focus{
+              outline: 0;
+            }
+          }
+          .icon-search{
+            color: $midGray;
+            left: 10px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+
+
+        .sells{
+          color: $black;
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
+
+        .sellsCont{
+          width: 100%;
+          div{
+            margin-bottom: 20px;
+            span{
+              font-size: 18px;
+              font-weight: bold;
+              color: $midGray;
+              flex: 0.3;
+            }
+          }
+        }
+
+        &.contactUs{
+          .logo {
+
+            width: 150px;
+            margin-bottom: 20px;
+          }
+          form{
+            width: 88%;
+            display: flex;
+            flex-direction: column;
+          }
+        }
+
+        .sellsInfo{
+          h4{
+            font-weight: bold;
+            font-size: 18px;
+            border-bottom: 1px solid #e3e3e3;
+            padding-bottom: 15px;
+            display: inline-block;
+            margin-bottom: 25px;
+            color: $black;
+          }
+
+          h5{
+            font-weight: bold;
+            font-size: 17px;
+            padding-bottom: 15px;
+            margin-bottom: auto;
+            color: $black;
+
+            span{
+              color: $midGray;
+              font-size: 15px;
+              font-weight: bold;
+              margin-right: 10px;
+            }
+          }
+
+          .price{
+            color: $midGray;
+            display: block;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 25px;
+
+          }
+
+          ul{
+            max-width: 400px;
+            li{
+              color: $midGray;
+              font-size: 16px;
+              margin-bottom: 10px;
+              margin-left: 20px;
+              span{
+                color: $black;
+                margin-left: 10px;
+              }
+            }
+          }
+
+        }
+        .accs{
+          border-radius: 20px;
         }
 
       }
@@ -1869,6 +2100,30 @@ body {
                   border-radius: 50%;
                   border: 1px solid #e4e4e4;
                 }
+
+                a{
+                  justify-content: center;
+                  color: $midGray;
+
+                  &.accepted{
+                    color: #6bc535;
+                    font-size: 18px;
+                  }
+
+                  &.rejected{
+                    color: #ea5750;
+                    font-size: 18px;
+                  }
+                }
+                &.accepted{
+                  color: #6bc535;
+                  font-size: 18px;
+                }
+
+                &.rejected{
+                  color: #ea5750;
+                  font-size: 18px;
+                }
               }
 
               &.comp{
@@ -1930,6 +2185,81 @@ body {
 
 
 @media(max-width: 767px) {
+
+  form {
+    .form-group {
+      margin-bottom: 30px;
+      label {
+        margin-bottom: 15px;
+        font-size: 14px;
+      }
+
+      .form-control {
+        height: 45px;
+        padding: 10px 10px;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .orangeBtn {
+    font-size: 13px;
+    height: 45px;
+  }
+
+  .authForm {
+    .container {
+      .logo {
+        width: 100px;
+        margin-top: 0;
+      }
+
+      form {
+        width: 100%;
+        min-height: unset;
+        margin-bottom: 0;
+        padding: 20px;
+        
+        .title {
+          font-size: 17px;
+        }
+
+        .forget {
+          font-size: 14px;
+        }
+
+        .createAcc {
+          font-size: 15px;
+        }
+
+      }
+
+      .footerBuilding {
+        height: 200px;
+      }
+
+      .custom-checkbox {
+        .custom-control-label {
+          font-size: 14px;
+
+          &::before {
+            width: 16px;
+            height: 16px;
+          }
+
+          &::after {
+            top: 0;
+            right: 0;
+            transform: translateY(0);
+            padding-right: 15px;
+          }
+        }
+      }
+
+    }
+  }
+
+
 }
 
 /*Small Screen*/

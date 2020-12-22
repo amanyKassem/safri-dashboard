@@ -22,6 +22,14 @@
   background: #535455;
 }
 
+.pac-container {
+  z-index: 2000 !important;
+}
+
+.h40 {
+  height: 40px !important;
+}
+
 .btn:hover, .btn:focus, .btn.focus {
   text-decoration: none;
   outline: none;
@@ -77,12 +85,17 @@ form .form-group .form-control:focus {
 }
 form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), form .bootstrap-select > .dropdown-toggle {
   height: 50px;
-  border-radius: 7px;
+  border-radius: 0;
 }
 form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder, form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:active, form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:focus,
 form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:hover, form .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder, form .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:active, form .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:focus,
 form .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:hover {
-  border-radius: 7px;
+  border-radius: 0;
+}
+
+textarea {
+  resize: none;
+  height: auto !important;
 }
 
 :placeholder-shown::-webkit-input-placeholder {
@@ -100,9 +113,9 @@ form .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:hove
 }
 
 .customHr {
-  margin-top: 0;
-  margin-bottom: 0;
-  border-top: 1px solid #eaeaea;
+  width: 100%;
+  margin: 35px 0;
+  border: 1px solid #f3f3f3;
 }
 
 a,
@@ -796,13 +809,15 @@ body {
   border-color: #FCA003;
   background-color: #FCA003;
 }
+.dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  margin-right: 15px;
+}
 .dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle {
   width: 110px;
   height: 40px;
   font-size: 15px;
   background-color: #f7f7f7;
   color: #a7a7a7;
-  margin-right: 15px;
 }
 .dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder, .dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:active, .dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:focus,
 .dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:hover, .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder, .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:active, .dashContent .content .container .filterDiv .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:focus,
@@ -994,10 +1009,6 @@ body {
   border-radius: 0;
   margin-right: 0;
 }
-.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .form-group textarea {
-  resize: none;
-  height: auto;
-}
 .dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-footer {
   padding: 20px 30px;
   border-top: 0;
@@ -1155,7 +1166,7 @@ body {
 .dashContent .content .container .filterDiv .dropBox .imagesUploadBlock {
   margin: 10px 0;
 }
-.dashContent .content .container .filterDiv .imgMontg .clickAdd, .dashContent .content .container .filterDiv .imgMontg .addImage {
+.dashContent .content .container .filterDiv .imgMontg .clickAdd {
   width: 70px;
   height: 70px;
   padding: 0;
@@ -1167,7 +1178,7 @@ body {
   border: 2px dashed #FCA003;
   border-radius: 50%;
 }
-.dashContent .content .container .filterDiv .imgMontg .clickAdd:focus, .dashContent .content .container .filterDiv .imgMontg .addImage:focus {
+.dashContent .content .container .filterDiv .imgMontg .clickAdd:focus {
   outline: none;
 }
 .dashContent .content .container .filterDiv .settingForm {
@@ -1176,11 +1187,198 @@ body {
   flex-direction: column;
   align-items: center;
 }
+.dashContent .content .container .filterDiv .settingForm .changeImg {
+  margin-bottom: 50px;
+}
+.dashContent .content .container .filterDiv .settingForm .changeImg .change {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.dashContent .content .container .filterDiv .settingForm .changeImg .change img {
+  width: 100%;
+  height: 100%;
+}
+.dashContent .content .container .filterDiv .settingForm .changeImg .change .file-upload {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
 .dashContent .content .container .filterDiv .settingForm .form-group {
   width: 100%;
+  position: relative;
 }
 .dashContent .content .container .filterDiv .settingForm .form-group input {
   color: #7e8082;
+}
+.dashContent .content .container .filterDiv .settingForm .form-group img {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+}
+.dashContent .content .container .filterDiv .settingForm .form-group .locImg img {
+  width: 18px;
+}
+.dashContent .content .container .filterDiv .openingTime {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.dashContent .content .container .filterDiv .openingTime .time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashContent .content .container .filterDiv .openingTime .time span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #7e8082;
+}
+.dashContent .content .container .filterDiv .openingTime .time span:last-child {
+  margin-right: 55px;
+}
+.dashContent .content .container .filterDiv .openingTime .custom-switch {
+  padding-left: 70px;
+}
+.dashContent .content .container .filterDiv .openingTime .custom-switch .custom-control-label {
+  font-size: 18px;
+  color: #a7a7a7;
+  font-weight: bold;
+}
+.dashContent .content .container .filterDiv .openingTime .custom-switch .custom-control-label::before {
+  border-radius: 15px;
+  width: 50px;
+  height: 25px;
+  left: -70px;
+}
+.dashContent .content .container .filterDiv .openingTime .custom-switch .custom-control-label::after {
+  top: 7px;
+  left: -65px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+.dashContent .content .container .filterDiv .openingTime .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #cacaca;
+  background-color: #cacaca;
+}
+.dashContent .content .container .filterDiv .openingTime .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+  background-color: #f29f33;
+  left: -55px;
+}
+.dashContent .content .container .filterDiv #map {
+  height: 400px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.dashContent .content .container .filterDiv .searchCont {
+  position: absolute;
+  top: 25px;
+  left: 35px;
+}
+.dashContent .content .container .filterDiv .searchCont #searchTextField {
+  border: 0;
+  height: 40px;
+  border-radius: 20px;
+  padding: 10px 15px 10px 30px;
+  width: 270px;
+  font-size: 15px;
+  color: #7e8082;
+  outline: 0;
+}
+.dashContent .content .container .filterDiv .searchCont #searchTextField:focus {
+  outline: 0;
+}
+.dashContent .content .container .filterDiv .searchCont .icon-search {
+  color: #7e8082;
+  left: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.dashContent .content .container .filterDiv .sells {
+  color: #2D2D2D;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.dashContent .content .container .filterDiv .sellsCont {
+  width: 100%;
+}
+.dashContent .content .container .filterDiv .sellsCont div {
+  margin-bottom: 20px;
+}
+.dashContent .content .container .filterDiv .sellsCont div span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #7e8082;
+  flex: 0.3;
+}
+.dashContent .content .container .filterDiv.contactUs .logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+.dashContent .content .container .filterDiv.contactUs form {
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+}
+.dashContent .content .container .filterDiv .sellsInfo h4 {
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 15px;
+  display: inline-block;
+  margin-bottom: 25px;
+  color: #2D2D2D;
+}
+.dashContent .content .container .filterDiv .sellsInfo h5 {
+  font-weight: bold;
+  font-size: 17px;
+  padding-bottom: 15px;
+  margin-bottom: auto;
+  color: #2D2D2D;
+}
+.dashContent .content .container .filterDiv .sellsInfo h5 span {
+  color: #7e8082;
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.dashContent .content .container .filterDiv .sellsInfo .price {
+  color: #7e8082;
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.dashContent .content .container .filterDiv .sellsInfo ul {
+  max-width: 400px;
+}
+.dashContent .content .container .filterDiv .sellsInfo ul li {
+  color: #7e8082;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.dashContent .content .container .filterDiv .sellsInfo ul li span {
+  color: #2D2D2D;
+  margin-left: 10px;
+}
+.dashContent .content .container .filterDiv .accs {
+  border-radius: 20px;
 }
 .dashContent .content .container div.dataTables_wrapper {
   width: 100%;
@@ -1522,6 +1720,26 @@ body {
   border-radius: 50%;
   border: 1px solid #e4e4e4;
 }
+.dashContent .content .container .orderDetTable table tbody tr td a {
+  justify-content: center;
+  color: #7e8082;
+}
+.dashContent .content .container .orderDetTable table tbody tr td a.accepted {
+  color: #6bc535;
+  font-size: 18px;
+}
+.dashContent .content .container .orderDetTable table tbody tr td a.rejected {
+  color: #ea5750;
+  font-size: 18px;
+}
+.dashContent .content .container .orderDetTable table tbody tr td.accepted {
+  color: #6bc535;
+  font-size: 18px;
+}
+.dashContent .content .container .orderDetTable table tbody tr td.rejected {
+  color: #ea5750;
+  font-size: 18px;
+}
 .dashContent .content .container .orderDetTable table tbody tr.comp {
   background: #fdf0d6;
 }
@@ -1558,6 +1776,61 @@ body {
 
 /*end scroll-top*/
 /* Start Media Query */
+@media (max-width: 767px) {
+  form .form-group {
+    margin-bottom: 30px;
+  }
+  form .form-group label {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  form .form-group .form-control {
+    height: 45px;
+    padding: 10px 10px;
+    font-size: 13px;
+  }
+
+  .orangeBtn {
+    font-size: 13px;
+    height: 45px;
+  }
+
+  .authForm .container .logo {
+    width: 100px;
+    margin-top: 0;
+  }
+  .authForm .container form {
+    width: 100%;
+    min-height: unset;
+    margin-bottom: 0;
+    padding: 20px;
+  }
+  .authForm .container form .title {
+    font-size: 17px;
+  }
+  .authForm .container form .forget {
+    font-size: 14px;
+  }
+  .authForm .container form .createAcc {
+    font-size: 15px;
+  }
+  .authForm .container .footerBuilding {
+    height: 200px;
+  }
+  .authForm .container .custom-checkbox .custom-control-label {
+    font-size: 14px;
+  }
+  .authForm .container .custom-checkbox .custom-control-label::before {
+    width: 16px;
+    height: 16px;
+  }
+  .authForm .container .custom-checkbox .custom-control-label::after {
+    top: 0;
+    right: 0;
+    transform: translateY(0);
+    padding-right: 15px;
+  }
+}
 /*Small Screen*/
 /*Medium Screen*/
 @media (min-width: 1200px) {

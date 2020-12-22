@@ -23,6 +23,7 @@ $(document).ready(function () {
 
     });
 
+
     // side menu li active
     // $(".mainUl li a").click(function () {
     //     $(this).parent().addClass("active").siblings().removeClass("active");
@@ -66,6 +67,33 @@ $(document).ready(function () {
             $(this).parents('.textCenter').remove();
         });
 
+    });
+
+
+
+    // upload settings image
+    var readURL = function(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.changeImg img').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+
+    $(".file-upload").on('change', function(){
+        readURL(this);
+    });
+
+
+    // get map location
+    $(".getLoc").click(function () {
+        let value = $("#searchTextField").val();
+        $("#location").val(value);
     });
 
 

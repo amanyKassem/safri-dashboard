@@ -117,7 +117,7 @@
                 </a>
             </li>
 
-            <li>
+            <li class="sub-menu">
                 <a href="orders.html">
                     <span class="icon-order_bar_yellow"></span>
                     الطلبات
@@ -137,18 +137,13 @@
                     <span class="icon-Offers_bar_yellow"></span>
                     اضافة عرض
                 </a>
-
             </li>
 
-            <li class="active sub-menu">
+            <li>
                 <a href="settings.html">
                     <span class="icon-settings_bar_yellow"></span>
                     الاعدادات
                 </a>
-                <ul>
-                    <li class="active"><a href='addOffer.html'>الملف الشخصي</a></li>
-                    <li><a href='restInfo.html'>معلومات المطعم</a></li>
-                </ul>
             </li>
 
             <li>
@@ -158,7 +153,7 @@
                 </a>
             </li>
 
-            <li>
+            <li class="active">
                 <a href="contactUs.html">
                     <span class="icon-call_bar_yellow"></span>
                     تواصل معنا
@@ -205,38 +200,30 @@
 
             </div>
 
-            <div class="filterDiv rightBorder">
-                <h3>الملف الشخصي</h3>
-            </div>
+            <div class="filterDiv contactUs flex-column">
+                <img src="img/logo_final.png" class="logo" alt="logo">
 
-            <div class="filterDiv flex-column p-5">
-                <form class="settingForm" action="">
+                <form action="">
 
-                    <div class="changeImg">
-                        <a class="change">
-                            <img src="img/upload_image_full.png" alt="profile">
-                            <input class="file-upload" type="file" accept="image/*"/>
-                        </a>
+                    <div class="form-group">
+                        <label for="username">اسم المستخدم</label>
+                        <input type="text" class="form-control" id="username" >
                     </div>
 
                     <div class="form-group">
-                        <label for="name">اسم المستخدم</label>
-                        <input type="text" class="form-control" id="name" value="أماني قاسم">
-                        <img src="img/edit.png" alt="edit">
+                        <label for="email">البريد الالكتروني</label>
+                        <input type="email" class="form-control" id="email">
                     </div>
 
                     <div class="form-group">
-                        <label for="pass">كلمة المرور</label>
-                        <input type="password" class="form-control" id="pass" value="123456">
-                        <img src="img/edit.png" alt="edit">
+                        <label for="msg">الرسالة</label>
+                        <textarea class="form-control" id="msg" rows="6"></textarea>
                     </div>
 
-                    <button type="submit" class="orangeBtn w-75 mb-5 mt-2">حفظ</button>
+                    <button type="submit" class="orangeBtn align-self-end">ارسال</button>
+
                 </form>
-
             </div>
-
-
 
         </div>
     </div>
