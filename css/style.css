@@ -322,6 +322,27 @@ body {
   -moz-box-shadow: 0px 3px 5px 0px rgba(111, 111, 111, 0.75);
   box-shadow: 0px 3px 5px 0px rgba(111, 111, 111, 0.75);
 }
+.dashHeader .overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+  transform: scaleX(0);
+  right: 0;
+  left: 0;
+  transform-origin: left;
+  z-index: 2;
+}
+.dashHeader .toggle {
+  display: none;
+}
+.dashHeader .toggle .fa {
+  cursor: pointer;
+  font-size: 25px;
+}
 .dashHeader .container {
   padding: 0 50px;
   max-width: 100%;
@@ -337,28 +358,28 @@ body {
 }
 .dashHeader .container .menu .rightDiv img {
   width: 115px;
-  margin-right: 25px;
+  margin-right: 40px;
 }
 .dashHeader .container .menu .rightDiv .toggleSideMenu span.icon-noun_menu {
   color: #fff;
   font-size: 20px;
 }
-.dashHeader .container .menu .leftDiv .lang {
+.dashHeader .container .menu .lang {
   color: #fff;
   font-weight: bold;
   font-size: 18px;
   border-left: 1px solid #6b6b6b;
   padding-left: 20px;
 }
-.dashHeader .container .menu .leftDiv .lang .icon-language {
+.dashHeader .container .menu .lang .icon-language {
   font-size: 22px;
   margin-left: 10px;
 }
-.dashHeader .container .menu .leftDiv .notifications {
+.dashHeader .container .menu .notifications {
   position: relative;
   margin: 0 25px;
 }
-.dashHeader .container .menu .leftDiv .notifications:after {
+.dashHeader .container .menu .notifications:after {
   content: "";
   position: absolute;
   top: 0;
@@ -368,7 +389,7 @@ body {
   background: #FCA003;
   border-radius: 50%;
 }
-.dashHeader .container .menu .leftDiv .notifications .icon-notifcation {
+.dashHeader .container .menu .notifications .icon-notifcation {
   color: #fff;
   font-size: 24px;
 }
@@ -541,7 +562,7 @@ body {
   box-shadow: 0 0 13px 0 rgba(50, 50, 50, 0.75);
 }
 .dashContent .content .container .mainOrders .blackBox img {
-  idth: 70px;
+  width: 70px;
   height: 60px;
   margin-left: 30px;
 }
@@ -614,6 +635,7 @@ body {
   width: 180px;
   overflow: hidden;
   color: #fff;
+  display: block;
 }
 .dashContent .content .container .latestProducts .products .product img {
   width: 100%;
@@ -1027,7 +1049,6 @@ body {
 .dashContent .content .container .filterDiv .payMethods {
   display: flex;
   width: 100%;
-  align-items: center;
   padding: 20px 45px;
   border-bottom: 1px solid #e4e4e4;
 }
@@ -1830,9 +1851,515 @@ body {
     transform: translateY(0);
     padding-right: 15px;
   }
+
+  .dashHeader .container {
+    padding: 10px 15px;
+  }
+  .dashHeader .container .menuBar .toggle {
+    display: block;
+    color: #FCA003;
+    font-size: 30px;
+    text-align: right;
+    justify-content: space-between;
+  }
+  .dashHeader .container .menu {
+    margin: 0;
+    padding: 15px;
+    background-color: #2D2D2D;
+    position: fixed;
+    width: 260px;
+    height: 100%;
+    top: 0;
+    transform: scaleX(1);
+    transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    text-align: left;
+    border-radius: 0;
+    display: block !important;
+    overflow: auto;
+    transform-origin: right;
+    right: -100%;
+    z-index: 3;
+  }
+  .dashHeader .container .menu.ulDir {
+    right: 0;
+  }
+  .dashHeader .container .menu .user {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #f2f2f2;
+    padding-bottom: 25px;
+  }
+  .dashHeader .container .menu .user img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 4px 11px 0 rgba(0, 0, 0, 0.18);
+    -webkit-box-shadow: 0 4px 11px 0 rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 0 4px 11px 0 rgba(0, 0, 0, 0.18);
+    -o-box-shadow: 0 4px 11px 0 rgba(0, 0, 0, 0.18);
+    margin-left: 20px;
+  }
+  .dashHeader .container .menu .mobileLinks {
+    font-size: 15px;
+    color: #fff;
+    margin: 20px 0 25px;
+  }
+  .dashHeader .container .menu .mobileLinks a {
+    color: #fff;
+  }
+  .dashHeader .container .menu .mobileLinks.active {
+    color: #FCA003;
+  }
+  .dashHeader .container .menu .mobileLinks.active a {
+    color: #FCA003;
+  }
+  .dashHeader .container .menu .mobileLinks.sub-menu ul {
+    margin: 15px 35px 15px 0;
+  }
+  .dashHeader .container .menu .mobileLinks.sub-menu ul li {
+    margin-bottom: 10px;
+  }
+  .dashHeader .container .menu .mobileLinks.sub-menu ul li > a {
+    border-right: 0;
+    position: relative;
+    color: #fff;
+  }
+  .dashHeader .container .menu .mobileLinks.sub-menu ul li > a:after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    right: -20px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+  }
+  .dashHeader .container .menu .mobileLinks.sub-menu ul li:hover > a, .dashHeader .container .menu .mobileLinks.sub-menu ul li.active > a {
+    border-right: 0;
+    color: #fff;
+  }
+  .dashHeader .container .menu .mobileLinks.sub-menu ul li:hover > a:after, .dashHeader .container .menu .mobileLinks.sub-menu ul li.active > a:after {
+    background: #f29f33;
+  }
+  .dashHeader .container .menu .mobileLinks span:first-child {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  .dashHeader .container .menu .mobileLinks.lang {
+    font-size: 16px;
+    border-left: 0;
+    padding-left: 0;
+  }
+  .dashHeader .container .menu .mobileLinks.notifications {
+    font-size: 15px;
+    color: #fff;
+  }
+  .dashHeader .container .menu .mobileLinks.notifications:after {
+    width: 8px;
+    height: 8px;
+  }
+
+  .dashContent .content.w-78 {
+    width: 100%;
+  }
+  .dashContent .content .container {
+    padding: 20px;
+  }
+  .dashContent .content .container .mainOrders {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .dashContent .content .container .mainOrders .blackBox {
+    flex: unset;
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 100%;
+  }
+  .dashContent .content .container .mainOrders .blackBox:last-child {
+    margin-bottom: 0;
+  }
+  .dashContent .content .container .mainOrders .blackBox img {
+    width: 50px;
+    height: 45px;
+    margin-left: 15px;
+  }
+  .dashContent .content .container .mainOrders .blackBox span {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+  }
+  .dashContent .content .container .mainOrders .blackBox h3 {
+    font-size: 16px;
+  }
+  .dashContent .content .container .mainOrders .blackBox h3:first-child {
+    font-size: 23px;
+  }
+  .dashContent .content .container .latestProducts {
+    padding: 25px 20px;
+  }
+  .dashContent .content .container .latestProducts h3 {
+    font-size: 22px;
+    margin-bottom: 0;
+  }
+  .dashContent .content .container .latestProducts h3:after {
+    width: 25px;
+    height: 25px;
+    top: 0;
+  }
+  .dashContent .content .container .latestProducts .products {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .dashContent .content .container .latestProducts .products .product {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .dashContent .content .container .latestProducts .products .product img {
+    height: 140px;
+  }
+  .dashContent .content .container .latestProducts .products .product .info {
+    padding: 10px;
+  }
+  .dashContent .content .container .latestProducts .products .product .info h5 {
+    font-size: 14px;
+  }
+  .dashContent .content .container .latestProducts .products .product:last-child {
+    margin-bottom: 0;
+  }
+  .dashContent .content .container .mainInfo {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .dashContent .content .container .mainInfo .whiteBox {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  .dashContent .content .container .mainInfo .whiteBox .orangeBg {
+    width: 65px;
+    height: 65px;
+  }
+  .dashContent .content .container .mainInfo .whiteBox .orangeBg img {
+    width: 55px;
+    height: 55px;
+  }
+  .dashContent .content .container .mainInfo .whiteBox .info h3 {
+    font-size: 17px;
+  }
+  .dashContent .content .container .mainInfo .whiteBox .info h3:last-child {
+    font-size: 22px;
+  }
+  .dashContent .content .container .filterDiv {
+    flex-wrap: wrap;
+    padding: 20px 25px;
+  }
+  .dashContent .content .container .filterDiv .filterBox {
+    margin-bottom: 20px;
+  }
+  .dashContent .content .container .filterDiv.rightBorder {
+    padding: 20px 15px;
+  }
+  .dashContent .content .container .filterDiv.rightBorder h3 {
+    font-size: 18px;
+  }
+  .dashContent .content .container .filterDiv .anotherDet h4 {
+    font-size: 16px;
+  }
+  .dashContent .content .container .filterDiv .payMethods {
+    padding: 20px 25px;
+    flex-direction: column;
+  }
+  .dashContent .content .container .filterDiv .payMethods p {
+    line-height: 27px;
+    font-size: 14px;
+  }
+  .dashContent .content .container .filterDiv .payMethods div:first-child {
+    margin-bottom: 20px;
+  }
+  .dashContent .content .container .filterDiv .payMethods div h3 {
+    font-size: 15px;
+  }
+  .dashContent .content .container .filterDiv .orangeBtn {
+    min-width: 200px !important;
+  }
+  .dashContent .content .container .filterDiv .imgMontg .clickAdd {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+  .dashContent .content .container .filterDiv .dropBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .dashContent .content .container .filterDiv .dropBox .uploadImg, .dashContent .content .container .filterDiv .dropBox .uploadedBlock {
+    width: 130px;
+    height: 130px;
+  }
+  .dashContent .content .container .filterDiv.contactUs {
+    padding: 20px 10px;
+  }
+  .dashContent .content .container .filterDiv.contactUs .orangeBtn {
+    margin: auto;
+  }
+  .dashContent .content .container .filterDiv.contactUs .logo {
+    width: 110px;
+  }
+  .dashContent .content .container .orderDetTable table thead th {
+    padding: 10px;
+    font-size: 15px;
+  }
+  .dashContent .content .container .orderDetTable table tbody tr td {
+    font-size: 15px !important;
+  }
+  .dashContent .content .container .orderDetTable table tbody tr td a.accepted {
+    font-size: 15px;
+  }
+  .dashContent .content .container .orderDetTable table tbody tr td a.rejected {
+    font-size: 15px;
+  }
+  .dashContent .content .container .orderDetTable table tbody tr td img {
+    width: 40px;
+    height: 40px;
+  }
+  .dashContent .content .container .orderDetTable table tbody tr.comp td {
+    font-size: 15px;
+  }
+  .dashContent .content .container div.dataTables_wrapper .dataTables_scrollHead .dataTables_scrollHeadInner table thead th, .dashContent .content .container div.dataTables_wrapper .dataTables_scrollHead .dataTables_scrollHeadInner table thead td {
+    font-size: 15px;
+  }
+  .dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td {
+    font-size: 15px;
+  }
+  .dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td a.more {
+    font-size: 5px;
+  }
+  .dashContent .content .container .rateNumber {
+    height: 70px;
+    font-size: 17px;
+  }
+  .dashContent .content .container .notifications .headTitle {
+    padding: 20px;
+  }
+  .dashContent .content .container .notifications .headTitle h3 {
+    font-size: 19px;
+  }
+  .dashContent .content .container .notifications .noti {
+    padding: 20px;
+  }
+  .dashContent .content .container .notifications .noti .notiHead {
+    flex-direction: column;
+  }
+  .dashContent .content .container .notifications .noti .notiHead .title {
+    margin-bottom: 15px;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .dashContent .content .container .notifications .noti .notiHead .title h5 {
+    font-size: 17px;
+  }
+  .dashContent .content .container .notifications .noti .notiHead .title span {
+    margin-right: 0;
+  }
+  .dashContent .content .container .notifications .noti p {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 27px;
+  }
+  .dashContent .content .container .notifications .noti.rate {
+    flex-direction: column;
+  }
+  .dashContent .content .container .notifications .noti.rate img {
+    width: 55px;
+    height: 55px;
+    margin: 0 0 20px;
+  }
 }
 /*Small Screen*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .dashHeader .container {
+    padding: 0 25px;
+  }
+  .dashHeader .container .menu .rightDiv {
+    width: 230px;
+  }
+
+  .dashContent .sideMenu {
+    width: 250px;
+  }
+  .dashContent .sideMenu .restInfo span {
+    font-size: 18px;
+  }
+  .dashContent .sideMenu .mainUl {
+    margin-top: 30px;
+  }
+  .dashContent .sideMenu .mainUl li > a {
+    font-size: 16px;
+  }
+  .dashContent .content.w-78 {
+    width: calc( 100% - 250px);
+  }
+  .dashContent .content .container {
+    padding: 25px;
+  }
+  .dashContent .content .container .mainOrders {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .dashContent .content .container .mainOrders .blackBox {
+    flex: unset;
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 100%;
+  }
+  .dashContent .content .container .mainOrders .blackBox:last-child {
+    margin-bottom: 0;
+  }
+  .dashContent .content .container .mainOrders .blackBox img {
+    width: 50px;
+    height: 45px;
+  }
+  .dashContent .content .container .mainOrders .blackBox span {
+    width: 40px;
+    height: 40px;
+  }
+  .dashContent .content .container .mainOrders .blackBox h3 {
+    font-size: 16px;
+  }
+  .dashContent .content .container .mainOrders .blackBox h3:first-child {
+    font-size: 23px;
+  }
+  .dashContent .content .container .latestProducts .products {
+    flex-wrap: wrap;
+  }
+  .dashContent .content .container .latestProducts .products .product {
+    margin: 0 10px 20px;
+    flex: 1;
+    min-width: 40%;
+  }
+  .dashContent .content .container .mainInfo {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .dashContent .content .container .mainInfo .whiteBox {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  .dashContent .content .container .mainInfo .whiteBox .orangeBg {
+    width: 65px;
+    height: 65px;
+  }
+  .dashContent .content .container .mainInfo .whiteBox .orangeBg img {
+    width: 55px;
+    height: 55px;
+  }
+  .dashContent .content .container .mainInfo .whiteBox .info h3 {
+    font-size: 17px;
+  }
+  .dashContent .content .container .mainInfo .whiteBox .info h3:last-child {
+    font-size: 22px;
+  }
+  .dashContent .content .container .filterDiv {
+    flex-wrap: wrap;
+    padding: 20px 15px;
+  }
+  .dashContent .content .container .filterDiv.rightBorder {
+    padding: 20px 25px;
+  }
+  .dashContent .content .container .filterDiv.rightBorder h3 {
+    font-size: 20px;
+  }
+  .dashContent .content .container .filterDiv .orangeBtn {
+    min-width: 200px !important;
+  }
+  .dashContent .content .container .filterDiv .dropBox {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .dashContent .content .container div.dataTables_wrapper .dataTables_length, .dashContent .content .container div.dataTables_wrapper .dataTables_filter {
+    width: 100%;
+    text-align: center;
+  }
+  .dashContent .content .container .notifications .noti {
+    padding: 25px 30px;
+  }
+}
 /*Medium Screen*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .dashContent .content .container {
+    padding: 25px;
+  }
+  .dashContent .content .container .mainOrders {
+    flex-wrap: wrap;
+  }
+  .dashContent .content .container .mainOrders .blackBox {
+    padding: 15px;
+    flex: 1;
+    min-width: 50%;
+  }
+  .dashContent .content .container .mainOrders .blackBox img {
+    width: 55px;
+    height: 45px;
+    margin-left: 20px;
+  }
+  .dashContent .content .container .mainOrders .blackBox span {
+    width: 45px;
+    height: 40px;
+    margin-left: 20px;
+  }
+  .dashContent .content .container .mainOrders .blackBox h3 {
+    font-size: 18px;
+  }
+  .dashContent .content .container .mainOrders .blackBox h3:first-child {
+    font-size: 25px;
+  }
+  .dashContent .content .container .latestProducts .products {
+    flex-wrap: wrap;
+  }
+  .dashContent .content .container .latestProducts .products .product {
+    margin: 0 10px 20px;
+    flex: 1;
+    min-width: 40%;
+  }
+  .dashContent .content .container .mainInfo {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .dashContent .content .container .mainInfo .whiteBox {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  .dashContent .content .container .mainInfo .whiteBox .orangeBg {
+    width: 65px;
+    height: 65px;
+  }
+  .dashContent .content .container .mainInfo .whiteBox .orangeBg img {
+    width: 55px;
+    height: 55px;
+  }
+  .dashContent .content .container .mainInfo .whiteBox .info h3 {
+    font-size: 17px;
+  }
+  .dashContent .content .container .mainInfo .whiteBox .info h3:last-child {
+    font-size: 22px;
+  }
+  .dashContent .content .container .filterDiv .dropBox {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 @media (min-width: 1200px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 1600px;
