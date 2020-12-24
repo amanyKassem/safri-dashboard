@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css"/>
     <link href="css/bootstrap-select.min.css" rel="stylesheet"/>
-    <!--<link href="css/styleLTR.css" rel="stylesheet" />-->
+<!--    <link href="css/styleRTL.css" rel="stylesheet" />-->
 
 </head>
 <body>
@@ -51,6 +51,82 @@
 
         <div class="menu d-flex justify-content-between align-items-center">
 
+            <a href="settings.html" class="user d-md-none">
+                <img src="img/pic.jpg" class="img-fluid" alt="profile">
+                <p>
+                    أماني قاسم
+                </p>
+            </a>
+
+            <a href="index.html" class="mobileLinks d-md-none">
+                <span class="icon-Home_yellow"></span>
+                <span>الرئيسية</span>
+            </a>
+
+            <a href="notifications.html" class="mobileLinks notifications d-md-none">
+                <span class="icon-notifcation"></span>
+                <span>الاشعارات</span>
+            </a>
+
+            <a href="menu.html" class="mobileLinks d-md-none">
+                <span class="icon-Menu_bar_yellow"></span>
+                <span>المنيو</span>
+            </a>
+
+            <a href="products.html" class="mobileLinks d-md-none">
+                <span class="icon-product_bar_yellow"></span>
+                <span>المنتجات</span>
+            </a>
+
+            <a href="orders.html" class="mobileLinks d-md-none">
+                <span class="icon-order_bar_yellow"></span>
+                <span>الطلبات</span>
+            </a>
+
+            <a href="specialOrders.html" class="mobileLinks d-md-none">
+                <span class="icon-order_espcial_uellow"></span>
+                <span>طلبات خاصة</span>
+            </a>
+
+            <div class="active mobileLinks sub-menu d-md-none">
+
+                <a href="addOffer.html">
+                    <span class="icon-Offers_bar_yellow"></span>
+                    <span>اضافة عرض</span>
+                </a>
+
+                <ul>
+                    <li><a href='addOffer.html'>اضافة صورة</a></li>
+                    <li class="active"><a href='previousOffers.html'>العروض السابقة</a></li>
+                </ul>
+
+            </div>
+
+            <a href="settings.html" class="mobileLinks d-md-none">
+                <span class="icon-settings_bar_yellow"></span>
+                <span>الاعدادات</span>
+            </a>
+
+            <a href="comments.html" class="mobileLinks d-md-none">
+                <span class="icon-rate_menu_yellow"></span>
+                <span>التعليقات والتقييمات</span>
+            </a>
+
+            <a href="contactUs.html" class="mobileLinks d-md-none">
+                <span class="icon-call_bar_yellow"></span>
+                <span>تواصل معنا</span>
+            </a>
+
+            <a href="sells.html" class="mobileLinks d-md-none">
+                <span class="icon-bar_chart_yellow"></span>
+                <span>المبيعات</span>
+            </a>
+
+            <a href="#" class="lang mobileLinks d-md-none">
+                <span class="icon-language"></span>
+                <span>En</span>
+            </a>
+
             <div class="rightDiv">
                 <a href="index.html" class="d-none d-md-block">
                     <img src="img/safri_shadow.png" class="logo" alt="logo">
@@ -71,7 +147,7 @@
                     <span class="icon-notifcation"></span>
                 </a>
 
-                <div class="profile d-none d-md-block">
+                <div class="profile d-none d-md-flex">
                     <img class="img-fluid" src="img/pic.jpg" alt="profile">
                     <span class="icon-arrow_down_sign_to_navigate"></span>
                     <ul>
@@ -106,7 +182,7 @@
                 </a>
             </li>
 
-            <li class="active">
+            <li>
                 <a href="menu.html">
                     <span class="icon-Menu_bar_yellow"></span>
                     المنيو
@@ -209,7 +285,7 @@
 
             <div class="filterDiv">
 
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center filterBox">
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="selectAll">
                         <label class="custom-control-label" for="selectAll">تحديد الكل</label>

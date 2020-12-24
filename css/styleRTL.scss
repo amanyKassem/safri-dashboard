@@ -1,43 +1,25 @@
+$lightGray: #a7a7a7;
+$gray: #535455;
+$midGray: #7e8082;
+$black: #2D2D2D;
+$orange: #FCA003;
+$bgGray: #e4e4e4;
 
 body {
-  direction: rtl;
-  text-align: right;
+  direction: ltr;
+  text-align: left;
 }
 
 .owl-carousel {
   direction: ltr;
 
-  .startsBlock {
-    justify-content: flex-end;
-  }
-}
-
-.fadeInRight {
-  animation-name: fadeInLeft !important;
-}
-
-.fadeInLeft {
-  animation-name: fadeInRight !important;
-}
-
-.hvr-forward:hover, .hvr-forward:focus, .hvr-forward:active {
-  -webkit-transform: translateX(-8px);
-  transform: translateX(-8px);
 }
 
 #scroll-top {
   right: 15px;
+  left: auto;
 }
 
-.mr-18 {
-  margin-right: 0;
-  margin-left: 18px;
-}
-
-.mr-27 {
-  margin-right: 0;
-  margin-left: 27px;
-}
 
 .mr-1, .mx-1 {
   margin-right: 0!important;
@@ -64,16 +46,530 @@ body {
   margin-left: .5rem!important;
 }
 
+.mr-sm-4, .mx-sm-4 {
+  margin-right: 0!important;
+  margin-left: 1.5rem!important;
+}
 
-@media(max-width: 767px) {
+.ml-3, .mx-3 {
+  margin-right: 1rem!important;
+  margin-left: 0!important;
+}
+
+form {
+  .form-group {
+    .form-control {
+      text-align: left;
+    }
+  }
+}
+
+.toggleSideMenu {
+  transform: rotate(-180deg);
+}
+
+.authForm {
+  .container {
+    .custom-checkbox {
+      .custom-control-label {
+        padding-left: 40px;
+        padding-right: 0;
+
+        &::before , &::after {
+          right: auto;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+.dashHeader {
+
+  .overlay {
+    right: 0;
+    left: auto;
+    transform-origin: right;
+  }
+
+  .container {
+    .menu {
+
+      .leftDiv{
+        .profile {
+          align-items: center;
+          img {
+            margin-left: 0;
+            margin-right: 7px;
+          }
+          ul{
+            left: -75px;
+            right: auto;
+          }
+        }
+      }
+
+
+      .lang {
+        border-left: 0;
+        border-right: 1px solid #6b6b6b;
+        padding-left: 0;
+        padding-right: 20px;
+        .icon-language {
+          margin-right: 10px;
+          margin-left: 0;
+        }
+      }
+
+    }
+  }
+}
+
+.dashContent {
+  .sideMenu {
+    right: auto;
+    left: 0;
+
+    .restInfo {
+      img {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+    }
+    .mainUl {
+      li {
+        > a {
+          border-right: 0;
+          border-left: 3px solid transparent;
+          span {
+            margin-left: 0;
+            margin-right: 20px;
+          }
+        }
+
+        &.active , &:hover{
+          > a{
+            border-right: 0;
+            border-left: 3px solid $orange;
+          }
+        }
+
+        &.sub-menu{
+          ul{
+            margin: 15px 0 15px 50px;
+
+            li{
+              > a {
+                border-left: 0;
+                position: relative;
+                &:after {
+                  right: auto;
+                  left: 0;
+                }
+              }
+
+              &:hover > a , &.active > a {
+                border-left: 0;
+
+              }
+            }
+
+          }
+        }
+
+      }
+    }
+  }
+
+  .content {
+    .container {
+      padding: 30px 55px 30px 30px;
+      .mainOrders{
+        .blackBox{
+          img {
+            margin-right: 30px;
+            margin-left: 0;
+          }
+          span {
+            margin-right: 30px;
+            margin-left: 0;
+          }
+        }
+      }
+
+      .filterDiv{
+
+        .settingForm {
+          .form-group{
+            img {
+              right: 12px;
+              left: auto;
+            }
+          }
+        }
+
+        .sellsInfo {
+          ul {
+            li {
+              margin-right: 20px;
+              margin-left: 0;
+              span {
+                margin-right: 10px;
+                margin-left: 0;
+              }
+            }
+          }
+        }
+
+        &.rightBorder {
+          border-left: 18px solid #f29f33;
+          border-right: 0;
+        }
+
+        .custom-checkbox {
+          .custom-control-label {
+            padding-left: 25px;
+            padding-right: 0;
+
+            &::before  , &::after{
+              right: auto;
+              left: 0;
+            }
+          }
+        }
+
+        .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+          margin-right: 0;
+          margin-left: 15px;
+        }
+
+        .orangeBtn{
+          &.grayBtn {
+            margin-left: 30px;
+            margin-right: 0;
+          }
+        }
+
+        .modal{
+          .orangeBtn {
+            margin: 0 0 0 25px;
+          }
+
+          &#addProduc {
+            .modal-content{
+              .modal-body{
+                form {
+                  .add {
+                    i {
+                      margin-right: 20px;
+                      margin-left: 0;
+                    }
+                  }
+
+                  .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+                    margin-left: 0;
+                  }
+
+                }
+              }
+            }
+          }
+        }
+
+      }
+
+      div.dataTables_wrapper {
+
+        .dataTables_paginate {
+          .paginate_button {
+            &.previous , &.next{
+              transform: rotate(-180deg);
+            }
+          }
+        }
+
+
+        .dataTables_length input, .dataTables_filter input {
+          margin-left: 10px;
+          margin-right: 3px;
+        }
+      }
+
+      .rateNumber {
+        span {
+          margin-right: 25px;
+          margin-left: 0;
+        }
+      }
+
+      .notifications {
+        .headTitle {
+          border-left: 18px solid #f29f33;
+          border-right: 0;
+        }
+
+        .noti{
+
+          .notiHead {
+            .title {
+              span {
+                margin-left: 40px;
+                margin-right: 0;
+              }
+            }
+          }
+
+          &.rate{
+            img {
+              margin-right: 20px;
+              margin-left: 0;
+            }
+          }
+        }
+      }
+
+      .latestProducts {
+        h3{
+          &:after {
+            left: 0;
+            right: auto;
+          }
+        }
+      }
+
+      .productContainer{
+        .infoCont {
+          .info {
+            margin-left: 15px;
+            margin-right: 0;
+
+            a{
+              &.edit {
+                margin-right: 35px;
+                margin-left: 0;
+              }
+            }
+
+            .custom-checkbox {
+              margin-right: 80px;
+              margin-left: 0;
+              .custom-control-label {
+                padding-left: 55px;
+                padding-right: 0;
+                &::before , &::after {
+                  right: auto;
+                  left: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+
 
 }
 
+
+
+@media(max-width: 767px) {
+
+  .mr-sm-4, .mx-sm-4 {
+    margin-right: 0!important;
+    margin-left:0!important;
+  }
+  .dashHeader {
+    .container {
+      .menu {
+        text-align: left;
+        transform-origin: left;
+        left: -100%;
+        right: auto;
+
+        &.ulDir {
+          left: 0;
+          right: auto;
+        }
+
+        .user {
+
+          img {
+            margin-right: 20px;
+            margin-left: 0;
+          }
+
+        }
+
+        .mobileLinks{
+
+
+          &.sub-menu{
+            ul{
+              margin: 15px 0 15px 35px;
+
+              li{
+                > a {
+                  border-left: 0;
+
+                  &:after {
+                    left: -20px;
+                    right: auto;
+                  }
+                }
+
+                &:hover > a , &.active > a {
+                  border-left: 0;
+
+                }
+              }
+
+            }
+          }
+
+
+          span{
+            &:first-child{
+              margin-right: 10px;
+              margin-left: 0;
+            }
+          }
+
+          &.lang{
+            border-right: 0;
+            padding-right: 0;
+          }
+
+          &.notifications{
+            &:after{
+             left: 0;
+              right: auto;
+            }
+          }
+        }
+
+
+
+      }
+
+    }
+  }
+
+  .dashContent {
+    .content {
+      .container {
+        padding: 20px;
+
+        .mainOrders {
+          .blackBox {
+            img , span {
+              margin-left: 0;
+              margin-right: 15px;
+            }
+          }
+        }
+
+        .notifications {
+          .noti{
+            &.rate {
+              img {
+                margin: 0 0 20px;
+              }
+            }
+          }
+        }
+
+        .filterDiv{
+          .orangeBtn{
+            &.grayBtn {
+              margin-left: 0;
+            }
+          }
+
+          .modal{
+            .orangeBtn {
+              margin: 0;
+            }
+            &#addProduc {
+              .modal-content{
+                .modal-body{
+                  form {
+
+                    .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+                      margin-left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .productContainer{
+          .infoCont {
+            .info {
+              margin-left: 0;
+
+
+              .custom-checkbox{
+                margin-right: 25px;
+                .custom-control-label {
+                  padding-left: 40px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media(min-width: 768px) and (max-width: 991px) {
+  .dashContent {
+    .content {
+      .container {
+        padding: 25px;
+        .mainOrders {
+          .blackBox {
+            img , span {
+              margin-left: 0;
+              margin-right: 15px;
+            }
+          }
+        }
+
+        .productContainer{
+          .infoCont {
+            .info {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 
 }
 
 @media(min-width: 992px) and (max-width: 1199px) {
+  .dashContent {
+    .content {
+      .container {
+        padding: 25px;
+        .mainOrders {
+          .blackBox {
+            img , span {
+              margin-left: 0;
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
 
 

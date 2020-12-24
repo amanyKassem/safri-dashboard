@@ -397,6 +397,7 @@ body {
   height: 50px;
   position: relative;
   cursor: pointer;
+  align-items: center;
 }
 .dashHeader .container .menu .leftDiv .profile img {
   width: 50px;
@@ -1875,7 +1876,7 @@ body {
     -o-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
-    text-align: left;
+    text-align: right;
     border-radius: 0;
     display: block !important;
     overflow: auto;
@@ -1964,6 +1965,12 @@ body {
     font-size: 15px;
     color: #fff;
   }
+  .dashHeader .container .menu .mobileLinks.notifications.active {
+    color: #FCA003 !important;
+  }
+  .dashHeader .container .menu .mobileLinks.notifications.active a {
+    color: #FCA003 !important;
+  }
   .dashHeader .container .menu .mobileLinks.notifications:after {
     width: 8px;
     height: 8px;
@@ -1996,7 +2003,7 @@ body {
   .dashContent .content .container .mainOrders .blackBox span {
     width: 40px;
     height: 40px;
-    margin-left: 20px;
+    margin-left: 15px;
   }
   .dashContent .content .container .mainOrders .blackBox h3 {
     font-size: 16px;
@@ -2062,6 +2069,78 @@ body {
     flex-wrap: wrap;
     padding: 20px 25px;
   }
+  .dashContent .content .container .filterDiv .openingTime {
+    flex-direction: column;
+  }
+  .dashContent .content .container .filterDiv .openingTime .time {
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+  .dashContent .content .container .filterDiv .openingTime .time span {
+    font-size: 16px;
+  }
+  .dashContent .content .container .filterDiv .openingTime .time span:last-child {
+    margin-right: 0;
+  }
+  .dashContent .content .container .filterDiv .sellsInfo h4 {
+    font-size: 16px;
+    padding-bottom: 13px;
+    margin-bottom: 15px;
+  }
+  .dashContent .content .container .filterDiv .sellsInfo h5 {
+    line-height: 25px;
+    font-size: 15px;
+  }
+  .dashContent .content .container .filterDiv .sellsInfo .price {
+    margin-bottom: 20px;
+  }
+  .dashContent .content .container .filterDiv .sellsInfo ul {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .dashContent .content .container .filterDiv .accs {
+    margin: auto;
+  }
+  .dashContent .content .container .filterDiv .sells {
+    font-size: 18px;
+  }
+  .dashContent .content .container .filterDiv .sellsCont div {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .dashContent .content .container .filterDiv .sellsCont div span {
+    font-size: 14px;
+    flex: unset;
+  }
+  .dashContent .content .container .filterDiv .settingForm {
+    width: 100%;
+  }
+  .dashContent .content .container .filterDiv .settingForm .changeImg .change {
+    width: 70px;
+    height: 70px;
+  }
+  .dashContent .content .container .filterDiv .settingForm .form-group img {
+    width: 20px;
+    height: 20px;
+    left: 12px;
+    bottom: 13px;
+  }
+  .dashContent .content .container .filterDiv .settingForm .form-group .locImg img {
+    width: 14px;
+  }
+  .dashContent .content .container .filterDiv .searchCont {
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 75%;
+  }
+  .dashContent .content .container .filterDiv .searchCont #searchTextField {
+    height: 35px;
+    width: 100%;
+    font-size: 14px;
+  }
   .dashContent .content .container .filterDiv .filterBox {
     margin-bottom: 20px;
   }
@@ -2091,6 +2170,12 @@ body {
   .dashContent .content .container .filterDiv .orangeBtn {
     min-width: 200px !important;
   }
+  .dashContent .content .container .filterDiv .orangeBtn.grayBtn {
+    margin: 14px 0 0;
+  }
+  .dashContent .content .container .filterDiv .addMenu {
+    margin-top: 20px;
+  }
   .dashContent .content .container .filterDiv .imgMontg .clickAdd {
     width: 60px;
     height: 60px;
@@ -2113,6 +2198,57 @@ body {
   }
   .dashContent .content .container .filterDiv.contactUs .logo {
     width: 110px;
+  }
+  .dashContent .content .container .filterDiv .modal .modal-dialog .modal-title {
+    font-size: 17px;
+  }
+  .dashContent .content .container .filterDiv .modal .modal-dialog .modal-body form {
+    flex-direction: column;
+  }
+  .dashContent .content .container .filterDiv .modal .modal-dialog .modal-body form .form-group {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .dashContent .content .container .filterDiv .modal .orangeBtn {
+    width: 130px !important;
+    margin: 0;
+    min-width: unset !important;
+  }
+  .dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-header {
+    padding: 15px 20px;
+  }
+  .dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-header h5 {
+    font-size: 17px;
+  }
+  .dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-header .close {
+    font-size: 22px;
+  }
+  .dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body {
+    padding: 20px;
+  }
+  .dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .form-group {
+    margin-bottom: 20px;
+  }
+  .dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .form-group label {
+    font-size: 14px;
+  }
+  .dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .form-group .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), .dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .form-group .bootstrap-select > .dropdown-toggle {
+    height: 45px;
+  }
+  .dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form h4 {
+    font-size: 17px;
+  }
+  .dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .custom-switch {
+    margin-bottom: 10px;
+  }
+  .dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .add {
+    font-size: 16px;
+    margin: 40px 0 15px;
+  }
+  .dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .add i {
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
   }
   .dashContent .content .container .orderDetTable table thead th {
     padding: 10px;
@@ -2140,8 +2276,17 @@ body {
   .dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td {
     font-size: 15px;
   }
+  .dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td.offerImg img {
+    height: 75px;
+    width: 75px;
+  }
   .dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td a.more {
     font-size: 5px;
+  }
+  .dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td .accept, .dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td .refuse {
+    padding: 7px;
+    font-size: 15px;
+    width: 120px;
   }
   .dashContent .content .container .rateNumber {
     height: 70px;
@@ -2159,6 +2304,10 @@ body {
   .dashContent .content .container .notifications .noti .notiHead {
     flex-direction: column;
   }
+  .dashContent .content .container .notifications .noti .notiHead h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
   .dashContent .content .container .notifications .noti .notiHead .title {
     margin-bottom: 15px;
     justify-content: space-between;
@@ -2166,6 +2315,7 @@ body {
   }
   .dashContent .content .container .notifications .noti .notiHead .title h5 {
     font-size: 17px;
+    margin-bottom: 0;
   }
   .dashContent .content .container .notifications .noti .notiHead .title span {
     margin-right: 0;
@@ -2183,6 +2333,55 @@ body {
     width: 55px;
     height: 55px;
     margin: 0 0 20px;
+  }
+  .dashContent .content .container .productContainer .headTitle {
+    font-size: 15px;
+  }
+  .dashContent .content .container .productContainer .infoCont {
+    padding: 20px;
+    flex-direction: column;
+  }
+  .dashContent .content .container .productContainer .infoCont img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  .dashContent .content .container .productContainer .infoCont .info {
+    margin-right: 0;
+  }
+  .dashContent .content .container .productContainer .infoCont .info .additionPrice {
+    font-size: 15px;
+  }
+  .dashContent .content .container .productContainer .infoCont .info h5 {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  .dashContent .content .container .productContainer .infoCont .info h4 {
+    font-size: 16px;
+  }
+  .dashContent .content .container .productContainer .infoCont .info h4.comp {
+    font-size: 18px;
+  }
+  .dashContent .content .container .productContainer .infoCont .info .price {
+    font-size: 17px;
+  }
+  .dashContent .content .container .productContainer .infoCont .info p {
+    font-size: 14px;
+    line-height: 27px;
+  }
+  .dashContent .content .container .productContainer .infoCont .info .proName {
+    flex-wrap: wrap;
+  }
+  .dashContent .content .container .productContainer .infoCont .info .proName h5 {
+    font-size: 15px;
+    line-height: 27px;
+  }
+  .dashContent .content .container .productContainer .infoCont .info .custom-checkbox {
+    margin-left: 25px;
+  }
+  .dashContent .content .container .productContainer .infoCont .info .custom-checkbox .custom-control-label {
+    padding-right: 40px;
+    font-size: 15px;
   }
 }
 /*Small Screen*/
@@ -2228,10 +2427,12 @@ body {
   .dashContent .content .container .mainOrders .blackBox img {
     width: 50px;
     height: 45px;
+    margin-left: 15px;
   }
   .dashContent .content .container .mainOrders .blackBox span {
     width: 40px;
     height: 40px;
+    margin-left: 15px;
   }
   .dashContent .content .container .mainOrders .blackBox h3 {
     font-size: 16px;
@@ -2273,6 +2474,9 @@ body {
     flex-wrap: wrap;
     padding: 20px 15px;
   }
+  .dashContent .content .container .filterDiv .sellsCont div span {
+    flex: 1;
+  }
   .dashContent .content .container .filterDiv.rightBorder {
     padding: 20px 25px;
   }
@@ -2287,12 +2491,48 @@ body {
     justify-content: center;
     flex-wrap: wrap;
   }
+  .dashContent .content .container .filterDiv .payMethods {
+    padding: 20px;
+  }
+  .dashContent .content .container .filterDiv .payMethods div h3 {
+    font-size: 15px;
+  }
+  .dashContent .content .container .filterDiv .addMenu {
+    margin-top: 20px;
+  }
+  .dashContent .content .container .filterDiv .modal .modal-dialog {
+    max-width: 600px;
+  }
   .dashContent .content .container div.dataTables_wrapper .dataTables_length, .dashContent .content .container div.dataTables_wrapper .dataTables_filter {
     width: 100%;
     text-align: center;
   }
+  .dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td.offerImg img {
+    width: 115px;
+    height: 90px;
+  }
+  .dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td .accept, .dashContent .content .container div.dataTables_wrapper .dataTables_scrollBody table tbody tr td .refuse {
+    padding: 8px;
+    font-size: 16px;
+    width: 125px;
+  }
   .dashContent .content .container .notifications .noti {
     padding: 25px 30px;
+  }
+  .dashContent .content .container .productContainer .infoCont {
+    flex-direction: column;
+  }
+  .dashContent .content .container .productContainer .infoCont img {
+    margin-bottom: 25px;
+    width: 100%;
+    height: 200px;
+  }
+  .dashContent .content .container .productContainer .infoCont .info .proName {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .dashContent .content .container .productContainer .infoCont .info {
+    margin-right: 0;
   }
 }
 /*Medium Screen*/
@@ -2358,6 +2598,13 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+  }
+  .dashContent .content .container .filterDiv .sellsCont div span {
+    flex: 0.5;
+  }
+  .dashContent .content .container .productContainer .infoCont .info .proName {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
 @media (min-width: 1200px) {

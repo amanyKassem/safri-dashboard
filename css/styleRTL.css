@@ -1,51 +1,326 @@
 body {
-  direction: rtl;
-  text-align: right; }
+  direction: ltr;
+  text-align: left;
+}
 
 .owl-carousel {
-  direction: ltr; }
-  .owl-carousel .startsBlock {
-    justify-content: flex-end; }
-
-.fadeInRight {
-  animation-name: fadeInLeft !important; }
-
-.fadeInLeft {
-  animation-name: fadeInRight !important; }
-
-.hvr-forward:hover, .hvr-forward:focus, .hvr-forward:active {
-  -webkit-transform: translateX(-8px);
-  transform: translateX(-8px); }
+  direction: ltr;
+}
 
 #scroll-top {
-  right: 15px; }
-
-.mr-18 {
-  margin-right: 0;
-  margin-left: 18px; }
-
-.mr-27 {
-  margin-right: 0;
-  margin-left: 27px; }
+  right: 15px;
+  left: auto;
+}
 
 .mr-1, .mx-1 {
   margin-right: 0 !important;
-  margin-left: 0.25rem !important; }
+  margin-left: 0.25rem !important;
+}
 
 .mr-2, .mx-2 {
   margin-right: 0 !important;
-  margin-left: 0.5rem !important; }
+  margin-left: 0.5rem !important;
+}
 
 .mr-3, .mx-3 {
   margin-right: 0 !important;
-  margin-left: 1rem !important; }
+  margin-left: 1rem !important;
+}
 
 .mr-4, .mx-4 {
   margin-right: 0 !important;
-  margin-left: 1.5rem !important; }
+  margin-left: 1.5rem !important;
+}
 
 .mr-md-2, .mx-md-2 {
   margin-right: 0 !important;
-  margin-left: 0.5rem !important; }
+  margin-left: 0.5rem !important;
+}
+
+.mr-sm-4, .mx-sm-4 {
+  margin-right: 0 !important;
+  margin-left: 1.5rem !important;
+}
+
+.ml-3, .mx-3 {
+  margin-right: 1rem !important;
+  margin-left: 0 !important;
+}
+
+form .form-group .form-control {
+  text-align: left;
+}
+
+.toggleSideMenu {
+  transform: rotate(-180deg);
+}
+
+.authForm .container .custom-checkbox .custom-control-label {
+  padding-left: 40px;
+  padding-right: 0;
+}
+.authForm .container .custom-checkbox .custom-control-label::before, .authForm .container .custom-checkbox .custom-control-label::after {
+  right: auto;
+  left: 0;
+}
+
+.dashHeader .overlay {
+  right: 0;
+  left: auto;
+  transform-origin: right;
+}
+.dashHeader .container .menu .leftDiv .profile {
+  align-items: center;
+}
+.dashHeader .container .menu .leftDiv .profile img {
+  margin-left: 0;
+  margin-right: 7px;
+}
+.dashHeader .container .menu .leftDiv .profile ul {
+  left: -75px;
+  right: auto;
+}
+.dashHeader .container .menu .lang {
+  border-left: 0;
+  border-right: 1px solid #6b6b6b;
+  padding-left: 0;
+  padding-right: 20px;
+}
+.dashHeader .container .menu .lang .icon-language {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+.dashContent .sideMenu {
+  right: auto;
+  left: 0;
+}
+.dashContent .sideMenu .restInfo img {
+  margin-left: 0;
+  margin-right: 15px;
+}
+.dashContent .sideMenu .mainUl li > a {
+  border-right: 0;
+  border-left: 3px solid transparent;
+}
+.dashContent .sideMenu .mainUl li > a span {
+  margin-left: 0;
+  margin-right: 20px;
+}
+.dashContent .sideMenu .mainUl li.active > a, .dashContent .sideMenu .mainUl li:hover > a {
+  border-right: 0;
+  border-left: 3px solid #FCA003;
+}
+.dashContent .sideMenu .mainUl li.sub-menu ul {
+  margin: 15px 0 15px 50px;
+}
+.dashContent .sideMenu .mainUl li.sub-menu ul li > a {
+  border-left: 0;
+  position: relative;
+}
+.dashContent .sideMenu .mainUl li.sub-menu ul li > a:after {
+  right: auto;
+  left: 0;
+}
+.dashContent .sideMenu .mainUl li.sub-menu ul li:hover > a, .dashContent .sideMenu .mainUl li.sub-menu ul li.active > a {
+  border-left: 0;
+}
+.dashContent .content .container {
+  padding: 30px 55px 30px 30px;
+}
+.dashContent .content .container .mainOrders .blackBox img {
+  margin-right: 30px;
+  margin-left: 0;
+}
+.dashContent .content .container .mainOrders .blackBox span {
+  margin-right: 30px;
+  margin-left: 0;
+}
+.dashContent .content .container .filterDiv .settingForm .form-group img {
+  right: 12px;
+  left: auto;
+}
+.dashContent .content .container .filterDiv .sellsInfo ul li {
+  margin-right: 20px;
+  margin-left: 0;
+}
+.dashContent .content .container .filterDiv .sellsInfo ul li span {
+  margin-right: 10px;
+  margin-left: 0;
+}
+.dashContent .content .container .filterDiv.rightBorder {
+  border-left: 18px solid #f29f33;
+  border-right: 0;
+}
+.dashContent .content .container .filterDiv .custom-checkbox .custom-control-label {
+  padding-left: 25px;
+  padding-right: 0;
+}
+.dashContent .content .container .filterDiv .custom-checkbox .custom-control-label::before, .dashContent .content .container .filterDiv .custom-checkbox .custom-control-label::after {
+  right: auto;
+  left: 0;
+}
+.dashContent .content .container .filterDiv .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  margin-right: 0;
+  margin-left: 15px;
+}
+.dashContent .content .container .filterDiv .orangeBtn.grayBtn {
+  margin-left: 30px;
+  margin-right: 0;
+}
+.dashContent .content .container .filterDiv .modal .orangeBtn {
+  margin: 0 0 0 25px;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .add i {
+  margin-right: 20px;
+  margin-left: 0;
+}
+.dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  margin-left: 0;
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_paginate .paginate_button.previous, .dashContent .content .container div.dataTables_wrapper .dataTables_paginate .paginate_button.next {
+  transform: rotate(-180deg);
+}
+.dashContent .content .container div.dataTables_wrapper .dataTables_length input, .dashContent .content .container div.dataTables_wrapper .dataTables_filter input {
+  margin-left: 10px;
+  margin-right: 3px;
+}
+.dashContent .content .container .rateNumber span {
+  margin-right: 25px;
+  margin-left: 0;
+}
+.dashContent .content .container .notifications .headTitle {
+  border-left: 18px solid #f29f33;
+  border-right: 0;
+}
+.dashContent .content .container .notifications .noti .notiHead .title span {
+  margin-left: 40px;
+  margin-right: 0;
+}
+.dashContent .content .container .notifications .noti.rate img {
+  margin-right: 20px;
+  margin-left: 0;
+}
+.dashContent .content .container .latestProducts h3:after {
+  left: 0;
+  right: auto;
+}
+.dashContent .content .container .productContainer .infoCont .info {
+  margin-left: 15px;
+  margin-right: 0;
+}
+.dashContent .content .container .productContainer .infoCont .info a.edit {
+  margin-right: 35px;
+  margin-left: 0;
+}
+.dashContent .content .container .productContainer .infoCont .info .custom-checkbox {
+  margin-right: 80px;
+  margin-left: 0;
+}
+.dashContent .content .container .productContainer .infoCont .info .custom-checkbox .custom-control-label {
+  padding-left: 55px;
+  padding-right: 0;
+}
+.dashContent .content .container .productContainer .infoCont .info .custom-checkbox .custom-control-label::before, .dashContent .content .container .productContainer .infoCont .info .custom-checkbox .custom-control-label::after {
+  right: auto;
+  left: 0;
+}
+
+@media (max-width: 767px) {
+  .mr-sm-4, .mx-sm-4 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .dashHeader .container .menu {
+    text-align: left;
+    transform-origin: left;
+    left: -100%;
+    right: auto;
+  }
+  .dashHeader .container .menu.ulDir {
+    left: 0;
+    right: auto;
+  }
+  .dashHeader .container .menu .user img {
+    margin-right: 20px;
+    margin-left: 0;
+  }
+  .dashHeader .container .menu .mobileLinks.sub-menu ul {
+    margin: 15px 0 15px 35px;
+  }
+  .dashHeader .container .menu .mobileLinks.sub-menu ul li > a {
+    border-left: 0;
+  }
+  .dashHeader .container .menu .mobileLinks.sub-menu ul li > a:after {
+    left: -20px;
+    right: auto;
+  }
+  .dashHeader .container .menu .mobileLinks.sub-menu ul li:hover > a, .dashHeader .container .menu .mobileLinks.sub-menu ul li.active > a {
+    border-left: 0;
+  }
+  .dashHeader .container .menu .mobileLinks span:first-child {
+    margin-right: 10px;
+    margin-left: 0;
+  }
+  .dashHeader .container .menu .mobileLinks.lang {
+    border-right: 0;
+    padding-right: 0;
+  }
+  .dashHeader .container .menu .mobileLinks.notifications:after {
+    left: 0;
+    right: auto;
+  }
+
+  .dashContent .content .container {
+    padding: 20px;
+  }
+  .dashContent .content .container .mainOrders .blackBox img, .dashContent .content .container .mainOrders .blackBox span {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+  .dashContent .content .container .notifications .noti.rate img {
+    margin: 0 0 20px;
+  }
+  .dashContent .content .container .filterDiv .orangeBtn.grayBtn {
+    margin-left: 0;
+  }
+  .dashContent .content .container .filterDiv .modal .orangeBtn {
+    margin: 0;
+  }
+  .dashContent .content .container .filterDiv .modal#addProduc .modal-content .modal-body form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    margin-left: 0;
+  }
+  .dashContent .content .container .productContainer .infoCont .info {
+    margin-left: 0;
+  }
+  .dashContent .content .container .productContainer .infoCont .info .custom-checkbox {
+    margin-right: 25px;
+  }
+  .dashContent .content .container .productContainer .infoCont .info .custom-checkbox .custom-control-label {
+    padding-left: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .dashContent .content .container {
+    padding: 25px;
+  }
+  .dashContent .content .container .mainOrders .blackBox img, .dashContent .content .container .mainOrders .blackBox span {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+  .dashContent .content .container .productContainer .infoCont .info {
+    margin-left: 0;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .dashContent .content .container {
+    padding: 25px;
+  }
+  .dashContent .content .container .mainOrders .blackBox img, .dashContent .content .container .mainOrders .blackBox span {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+}
 
 /*# sourceMappingURL=styleRTL.css.map */
